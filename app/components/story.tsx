@@ -15,6 +15,9 @@ const bodySize: Record<Size, string> = {
   brief: "text-[1rem] leading-[1.6]",
 };
 
+const linkClass =
+  "underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark";
+
 // A front-page teaser. The headline opens the full story at /stories/<slug>.
 export default function Story({
   project,
@@ -24,6 +27,7 @@ export default function Story({
   size?: Size;
 }) {
   const href = `/stories/${project.slug}`;
+  const links = project.links.filter((l) => l.href);
 
   return (
     <article>
@@ -49,14 +53,27 @@ export default function Story({
             </li>
           ))}
         </ul>
-        <Link
-          href={href}
-          aria-label={`Read the full story: ${project.headline}`}
-          className="text-[0.95rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
-        >
-          Read the full story
-        </Link>
       </div>
+
+      {/* Full story first, then any outside links (Figma, live site, etc.) */}
+      <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5 text-[0.95rem]">
+        <li>
+          <Link
+            href={href}
+            aria-label={`Read the full story: ${project.headline}`}
+            className={`font-semibold ${linkClass}`}
+          >
+            Read the full story
+          </Link>
+        </li>
+        {links.map(({ label, href: url }) => (
+          <li key={label}>
+            <a href={url} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </article>
   );
 }
