@@ -1,32 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import "@fontsource-variable/newsreader/opsz.css";
+import "@fontsource-variable/newsreader/opsz-italic.css";
+import "@fontsource/ibm-plex-mono/400.css";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import SiteNav from "./components/site-nav";
 
 export const metadata: Metadata = {
   title: {
     default: "Jasmine Fortez",
     template: "%s · Jasmine Fortez",
   },
-  description: "Portfolio and blog of Jasmine Fortez.",
+  description:
+    "Jasmine Fortez is a software engineer from UC Santa Cruz who still thinks like a reporter.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+    <html lang="en" className="h-full antialiased">
+      <body className="flex min-h-full flex-col">
+        <SiteNav />
+        {children}
+      </body>
     </html>
   );
 }

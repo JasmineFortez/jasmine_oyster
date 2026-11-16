@@ -1,39 +1,67 @@
-const links = [
-  { label: "GitHub", href: "https://github.com/JasmineFortez" },
-  { label: "LinkedIn", href: "www.linkedin.com/in/jasmine-angel-fortez-9938741b2" },
-  { label: "Email", href: "mailto:fortezjasmineangel@gmail.com" },
-];
+import Link from "next/link";
+import ContactLinks from "./components/contact-links";
+import ProjectEntry from "./components/project-entry";
+import { aiBuilds, featured } from "./data/projects";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-6 py-24">
-      <p className="font-mono text-sm text-accent">Hi, I&apos;m</p>
-      <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">
-        Jasmine Fortez
-      </h1>
-      <p className="mt-6 text-lg leading-8 text-muted">
-        Before I wrote code, I wanted to be a journalist. Growing up in the Philippines, I fell in love with investigating and relaying information—partly out of raw curiosity, and partly because I was naturally chismosa.
+    <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-32">
+      {/* Nameplate */}
+      <section className="border-b-[3px] border-mark pt-20 pb-10 sm:pt-28">
+        <h1 className="text-[clamp(3.25rem,11vw,6.5rem)] leading-[0.92] font-medium tracking-[-0.03em] [font-variation-settings:'opsz'_72]">
+          Jasmine
+          <br />
+          Fortez
+        </h1>
+        <div className="mt-8 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <p className="max-w-md text-xl leading-snug">
+            Software engineer who still thinks like a reporter.
+            <span className="mt-1 block italic text-muted">
+              B.S. in Computer Science, UC Santa Cruz.
+            </span>
+          </p>
+          <ContactLinks />
+        </div>
+      </section>
 
-When my family immigrated to the U.S., that dream felt out of reach. Keeping up with English was exhausting, and the fear of being misunderstood pushed me toward mathematics and computer science, where logic was absolute and a semicolon meant the same thing in every language.
+      {/* Featured work */}
+      <section aria-labelledby="work" className="pt-14">
+        <h2 id="work" className="text-2xl font-medium tracking-tight">
+          Selected work
+        </h2>
+        <div className="mt-6">
+          {featured.map((p) => (
+            <ProjectEntry key={p.title} project={p} />
+          ))}
+        </div>
+      </section>
 
-After graduating with a 3.79 in CS from UC Santa Cruz and working across data pipelines and mobile apps, I realized technical systems are meaningless if you can't tell the human story behind them. This website is my newsroom: a place to bridge engineering logic with documentation, data storytelling, and the voice I almost left behind.
+      {/* AI-assisted builds */}
+      <section aria-labelledby="ai-builds" className="pt-16">
+        <h2 id="ai-builds" className="text-2xl font-medium tracking-tight">
+          AI-assisted builds
+        </h2>
+        <p className="mt-2 max-w-[34em] text-[1.05rem] leading-relaxed text-muted">
+          Smaller projects I shipped fast with AI. Each README covers what I
+          directed, what the AI wrote, and what I changed.
+        </p>
+        <div className="mt-6">
+          {aiBuilds.map((p) => (
+            <ProjectEntry key={p.title} project={p} size="brief" />
+          ))}
+        </div>
+      </section>
+
+      <p className="mt-16 border-t border-rule pt-8 text-[1.1rem]">
+        Why a software engineer built her portfolio like a newsroom:{" "}
+        <Link
+          href="/about"
+          className="underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
+        >
+          read the story
+        </Link>
+        .
       </p>
-
-      <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
-        {links.map(({ label, href }) => (
-          <li key={label}>
-            <a
-              href={href}
-              className="underline decoration-muted/40 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
-              {...(href.startsWith("http")
-                ? { target: "_blank", rel: "noopener noreferrer" }
-                : {})}
-            >
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
     </main>
   );
 }
