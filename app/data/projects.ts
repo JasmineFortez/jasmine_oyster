@@ -208,31 +208,48 @@ export const featured: Project[] = [
 export const aiBuilds: Project[] = [
   {
     slug: "baia-code-confidence",
-    kicker: "Beautiful As I Am",
-    headline: "A beginner coding curriculum for a DC youth nonprofit",
-    role: "Developer",
-    body: "A React site that teaches girls to code from zero, built with an AI-assisted workflow.",
-    stack: ["React", "Vercel"],
+    kicker: "Beautiful As I Am, Washington, D.C.",
+    headline: "I do, we do, you do: a three-week coding curriculum for young girls",
+    role: "Volunteer curriculum designer and developer",
+    body: "When BAIA wanted a STEM curriculum for elementary-school girls, I volunteered to build it: three weeks of lessons that each move from \u201cI do\u201d to \u201cwe do\u201d to \u201cyou do,\u201d delivered as a React site built with an AI-assisted workflow.",
+    stack: ["React", "Vercel", "AI-assisted"],
     links: [
       { label: "Visit the live site", href: "https://baia-code-confidence.vercel.app" },
     ],
+    context:
+      "Beautiful As I Am (BAIA) is a youth mentorship nonprofit in Washington, D.C. I started there as a communications and programs intern and later became its software developer.",
     article: [
       {
-        heading: "What it is",
+        heading: "Why it exists",
         paragraphs: [
-          "Beautiful As I Am is a youth mentorship nonprofit in Washington, D.C. Code Confidence is a beginner-friendly coding curriculum I built for its girls, designed for students starting from zero.",
+          "BAIA's leader wanted a STEM curriculum for the elementary-school girls in the program, and she wanted it to run for three weeks. I volunteered to build it.",
+          "Most of these girls had never written a line of code. The goal wasn't to turn them into programmers in three weeks. It was to help them walk away thinking, \u201cI can do this.\u201d",
         ],
       },
       {
-        heading: "How I built it",
+        heading: "I do, we do, you do",
         paragraphs: [
-          "I built it in React with an AI-assisted workflow and deployed it on Vercel. I designed the events page myself, and I wrote the main call to action, “Join the Village,” to match BAIA's own slogan, so the site feels like part of the community rather than a separate tool.",
+          "Every lesson follows the same rhythm. First, I do: the instructor shows how something works. Then, we do: everyone tries it together, with help right there. Finally, you do: each girl tries it on her own.",
+          "For a beginner, that order matters. Nobody gets thrown into the deep end, and by the time a girl is coding on her own, she's already done it once with support. That's where the name comes from. The whole curriculum is built to grow confidence, one step at a time.",
         ],
       },
       {
-        heading: "Where it stands",
+        heading: "Built to feel like BAIA",
         paragraphs: [
-          "The site is deployed but hasn't launched to the BAIA girls yet. Next up is cleaning up the code and writing a bilingual README that explains what I directed, what the AI wrote, and what I changed.",
+          "I wanted the site to feel like part of the BAIA community, not a separate tool. I designed the events page myself, and I wrote the main button, \u201cJoin the Village,\u201d to echo BAIA's own slogan.",
+        ],
+      },
+      {
+        heading: "How I used AI",
+        // TODO: which AI tool, what you asked it to do, and one thing it got wrong that you fixed
+        paragraphs: [
+          "I built the site in React with an AI-assisted workflow and deployed it on Vercel. I decided what the curriculum taught, how each lesson was structured, and how the site should feel. AI helped me build it quickly.",
+        ],
+      },
+      {
+        heading: "What's next",
+        paragraphs: [
+          "The site is live, but it hasn't launched to the girls yet. Before it does, I'm cleaning up the code and writing a bilingual README, in English and Tagalog, that explains what I directed, what the AI wrote, and what I changed.",
         ],
       },
     ],
