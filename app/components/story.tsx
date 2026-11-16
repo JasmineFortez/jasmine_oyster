@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "../data/projects";
 
 type Size = "lead" | "column" | "brief";
@@ -14,6 +15,7 @@ const bodySize: Record<Size, string> = {
   brief: "text-[1rem] leading-[1.6]",
 };
 
+// A front-page teaser. The headline opens the full story at /stories/<slug>.
 export default function Story({
   project,
   size = "column",
@@ -21,13 +23,18 @@ export default function Story({
   project: Project;
   size?: Size;
 }) {
-  const links = project.links.filter((l) => l.href);
+  const href = `/stories/${project.slug}`;
 
   return (
     <article>
       <p className="text-[0.95rem] italic text-mark">{project.kicker}</p>
       <h3 className={`mt-1.5 text-balance ${headlineSize[size]}`}>
-        {project.headline}
+        <Link
+          href={href}
+          className="decoration-mark decoration-2 underline-offset-[0.18em] transition-colors hover:underline"
+        >
+          {project.headline}
+        </Link>
       </h3>
       <p className="mt-2 text-[0.95rem] text-muted">{project.role}</p>
       <p className={`mt-3 ${bodySize[size]} ${size === "lead" ? "max-w-[34em]" : ""}`}>
@@ -42,17 +49,13 @@ export default function Story({
             </li>
           ))}
         </ul>
-        {links.map(({ label, href }) => (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[0.95rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
-          >
-            {label}
-          </a>
-        ))}
+        <Link
+          href={href}
+          aria-label={`Read the full story: ${project.headline}`}
+          className="text-[0.95rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
+        >
+          Read the full story
+        </Link>
       </div>
     </article>
   );
