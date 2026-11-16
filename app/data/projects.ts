@@ -151,10 +151,18 @@ export const featured: Project[] = [
         },
       },
       {
-        heading: "The plan, and what I'd change",
+        heading: "Why it feels like a dating app",
         paragraphs: [
-          "Our rollout plan was to build the app and recruit riders and drivers in the fall, pilot one route between Baskin Engineering and downtown Santa Cruz in winter, then add routes in spring. The biggest ask was an intro to campus Transportation and Parking Services for pickup hubs and carpool permit perks.",
-          "The research changed our thinking: transit doesn't just cost students jobs, it shapes which classes they take. If I did it again, I'd talk to drivers sooner.",
+          "Students already know how to find a match on their phones. They do it on Tinder and Hinge. So instead of inventing a new interface, I borrowed what they already use: a matching screen and a compatibility percentage that shows how well you and a driver line up, based on things like your route and your dealbreakers.",
+          "Nobody has to learn a new app to use it, and it makes finding a carpool feel fun instead of like a chore.",
+        ],
+      },
+      {
+        heading: "What I'd do differently",
+        paragraphs: [
+          "We didn't win the accelerator, and looking back, I know why. I did the research on the problem: I surveyed 24 students, talked with a MESA counselor, and looked at every option students already had, from bus trackers to Uber to carpool boards. By the end, I understood exactly why students were getting stranded.",
+          "What I didn't do was test my answer. I never asked students if they'd actually use OMW. Would they trust another student to drive them every week? Would drivers sign up? I designed the solution before checking it with the people it was for.",
+          "Next time, I'd put a rough prototype in front of students and drivers early, before polishing the pitch. The research also changed my thinking in one big way: transit doesn't just cost students jobs, it shapes which classes they take.",
         ],
       },
     ],
