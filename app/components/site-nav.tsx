@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-// Only sections that exist go in the nav. Add Scrapbook here when it's live.
+// Only sections that exist go in the nav. Add Kuwaderno (scrapbook) when it's live.
 const sections = [
   { label: "Work", href: "/" },
   { label: "About", href: "/about" },
@@ -11,13 +11,10 @@ export default function SiteNav() {
     <header className="sticky top-0 z-10 border-b border-rule bg-paper/90 backdrop-blur-sm">
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-3xl items-baseline justify-between px-6 py-4"
+        className="mx-auto flex max-w-6xl items-baseline justify-between px-6 py-3.5"
       >
-        <Link
-          href="/"
-          className="text-lg font-semibold tracking-tight [font-variant-caps:small-caps]"
-        >
-          Jasmine Fortez
+        <Link href="/" className="text-lg font-semibold tracking-tight">
+          The Jasmine Times
         </Link>
         <ul className="flex gap-6 text-[0.95rem]">
           {sections.map(({ label, href }) => (

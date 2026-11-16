@@ -14,7 +14,10 @@ export default function About() {
         <h1 className="border-b-[3px] border-mark pb-8 text-[clamp(2.5rem,7vw,4.25rem)] leading-[0.98] font-medium tracking-[-0.02em] [font-variation-settings:'opsz'_72]">
           The dispatch
         </h1>
-        <div className="mt-10 max-w-[34em] space-y-6 text-[1.2rem] leading-[1.7]">
+        <p className="mt-4 text-[0.95rem] italic text-muted">
+          By Jasmine Fortez
+        </p>
+        <div className="mt-8 max-w-[34em] space-y-6 text-[1.2rem] leading-[1.7]">
           <p>
             <span className="font-medium tracking-wide [font-variant-caps:small-caps]">
               San Jose, Calif.

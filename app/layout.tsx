@@ -7,11 +7,11 @@ import SiteNav from "./components/site-nav";
 
 export const metadata: Metadata = {
   title: {
-    default: "Jasmine Fortez",
-    template: "%s · Jasmine Fortez",
+    default: "The Jasmine Times",
+    template: "%s · The Jasmine Times",
   },
   description:
-    "Jasmine Fortez is a software engineer from UC Santa Cruz who still thinks like a reporter.",
+    "Jasmine Fortez is a software engineer building mobile apps, AI tools, and data products. UC Santa Cruz CS, by way of the Philippines.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

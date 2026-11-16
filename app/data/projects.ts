@@ -4,61 +4,61 @@
 export type ProjectLink = { label: string; href: string };
 
 export type Project = {
-  title: string;
-  context: string; // where / with whom
+  kicker: string; // where / with whom, shown above the headline
+  headline: string; // newspaper-style headline
   role: string;
-  summary: string; // one or two sentences: the problem and what you built
+  body: string; // one or two sentences: the problem and what you built
   stack: string[];
   links: ProjectLink[];
 };
 
+// The first one is the lead story; the rest run as columns below it.
 export const featured: Project[] = [
   {
-    title: "Variantz: customer and provider apps",
-    context: "Variantz, Singapore (UCEAP)",
-    role: "Application developer",
-    summary:
-      "Co-developed two cross-platform React Native apps in an 8-week sprint, including an offline-first cash payment confirmation flow, map location tracking, and ratings. The internship earned a UCEAP award.",
-    stack: ["React Native", "TypeScript", "Maps"],
+    kicker: "Variantz, Singapore",
+    headline: "Building a handyman app in eight weeks: real-time booking, tracking, and offline payments",
+    role: "Application developer, UCEAP Summer Global Internship 2025",
+    body: "Taught myself React Native and built features for a cross-platform handyman app, with separate customer and provider apps: real-time booking and tracking, an offline-first cash payment confirmation flow, and ratings. Worked with designers and backend engineers on API integration and stability across devices. Earned a 2025 UCEAP Internship Award.",
+    stack: ["React Native", "TypeScript", "APIs", "CI/CD"],
     links: [
-      // TODO: paste the UCSC Global Learning / UCEAP article URL
-      { label: "UCEAP feature", href: "" },
+      {
+        label: "Read the UCEAP award feature",
+        href: "https://uceap.universityofcalifornia.edu/awards/jasmine-fortez-internship-2025",
+      },
     ],
   },
   {
-    title: "Generative AI research",
-    context: "Tech4Good Lab, UC Santa Cruz",
+    kicker: "Tech4Good Lab, UC Santa Cruz",
+    headline: "Teaching with retrieval: generative AI research for education",
     role: "GenAI researcher and education lead",
     // TODO: one sentence on what your RAG system did and what you built in it
-    summary:
-      "Researched retrieval-augmented generation (RAG) for education as part of UCSC's Tech4Good lab, and led the lab's education work.",
+    body: "Researched retrieval-augmented generation (RAG) for education in UCSC's Tech4Good lab, and led the lab's education work.",
     stack: ["Python", "LLMs", "RAG"],
     links: [{ label: "Repo or paper", href: "" }],
   },
   {
-    title: "OMW: student carpool matching",
-    context: "MESA Idea Accelerator, UC Santa Cruz",
+    kicker: "MESA Idea Accelerator, UC Santa Cruz",
+    headline: "When 92% of buses pass you by: designing a student carpool app",
     role: "Product and UX lead",
-    summary:
-      "Synthesized 24 student surveys around a 92% campus bus pass-by rate and designed an interactive flow that matches commuters into carpools.",
+    body: "Synthesized 24 student surveys around a 92% campus bus pass-by rate and designed OMW, an interactive flow that matches commuters into carpools.",
     stack: ["Figma", "User research"],
     links: [
       // TODO: paste the public Figma prototype URL
-      { label: "Figma prototype", href: "" },
+      { label: "See the Figma prototype", href: "" },
     ],
   },
 ];
 
+// AI-assisted builds run as short briefs in the sidebar.
 export const aiBuilds: Project[] = [
   {
-    title: "BAIA Code Confidence",
-    context: "Beautiful As I Am",
+    kicker: "Beautiful As I Am",
+    headline: "A beginner coding curriculum for a DC youth nonprofit",
     role: "Developer",
-    summary:
-      "A beginner-friendly coding curriculum site for a DC youth mentorship nonprofit, built with an AI-assisted workflow.",
+    body: "A React site that teaches girls to code from zero, built with an AI-assisted workflow.",
     stack: ["React", "Vercel"],
     links: [
-      { label: "Live site", href: "https://baia-code-confidence.vercel.app" },
+      { label: "Visit the live site", href: "https://baia-code-confidence.vercel.app" },
     ],
   },
 ];
