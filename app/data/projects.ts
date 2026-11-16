@@ -20,6 +20,7 @@ export type Project = {
   body: string; // front-page teaser: one or two sentences
   stack: string[];
   links: ProjectLink[];
+  context?: string; // optional short note under the byline explaining the program or company
   leadImage?: Figure; // optional image at the top of the full story
   article: ArticleSection[]; // the full story
 };
@@ -107,6 +108,8 @@ export const featured: Project[] = [
       },
       { label: "Full pitch deck (PDF)", href: "/stories/omw/omw-pitch-deck.pdf" },
     ],
+    context:
+      "The MESA Idea Accelerator is a one-week course at UC Santa Cruz that teaches human-centered design, sponsored by Edwards Lifesciences, Keysight Technologies, and the Society for Information Management (SIM).",
     leadImage: {
       src: "/stories/omw/slide-01.webp",
       alt: "Title slide: OMW, On time. Matched. Weekly. Presented by Jasmine Fortez and Andrew Solis at MESA Idea Accelerator 2026.",
@@ -142,7 +145,7 @@ export const featured: Project[] = [
         heading: "What I designed",
         paragraphs: [
           "OMW, short for “on my way,” is built on three promises. On time: your seat is saved before you leave class, so a full bus can't make you late. Matched: you're paired with a verified UCSC student on your route who shares your dealbreakers, like a quiet ride or no smoking. Weekly: you set your schedule once and ride with the same person every week, with no posting and no hoping someone replies.",
-          "I led the project with my teammate Andrew Solis, and I built the Figma prototype and the pitch.",
+          "Partway through the program, our original team lead stepped away. Instead of letting the project stall, I stepped up to lead it, and I built the Figma prototype and the pitch with my teammate Andrew Solis.",
         ],
         figure: {
           src: "/stories/omw/slide-07.webp",

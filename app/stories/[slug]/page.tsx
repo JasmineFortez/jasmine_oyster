@@ -63,6 +63,11 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
           <p className="text-[1rem] italic text-muted">
             By Jasmine Fortez &middot; {project.role}
           </p>
+          {project.context && (
+            <p className="mt-3 max-w-[38em] text-[1rem] leading-relaxed">
+              {project.context}
+            </p>
+          )}
           <ul className="mt-3 flex flex-wrap gap-2 font-mono text-[0.75rem] text-mark">
             {project.stack.map((s) => (
               <li key={s} className="rounded-sm bg-mark/10 px-1.5 py-0.5">
