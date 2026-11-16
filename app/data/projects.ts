@@ -39,8 +39,8 @@ export const featured: Project[] = [
   {
     kicker: "MESA Idea Accelerator, UC Santa Cruz",
     headline: "When the bus drives right past you: a weekly carpool app for UCSC students",
-    role: "Co-creator, with Andrew Solis",
-    body: "Surveyed 24 students: 22 had been passed by a full bus, and students without cars missed twice as many jobs. Designed OMW, which pairs you with a verified UCSC student on your route every week, so a full bus can't make you late.",
+    role: "Project lead: built the prototype and pitch, with Andrew Solis",
+    body: "Surveyed 24 students: 22 had been passed by a full bus, and students without cars missed twice as many jobs. I designed OMW, which pairs you with a verified UCSC student on your route every week, so a full bus can't make you late.",
     stack: ["Figma", "User research", "Surveys"],
     links: [
       {
