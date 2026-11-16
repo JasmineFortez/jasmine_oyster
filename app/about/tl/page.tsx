@@ -53,8 +53,10 @@ export default function AboutTagalog() {
             nang iba. Nagkukuwentuhan kami tungkol sa araw namin at sa lahat ng balita:
             sino ang naghiwalay, sino ang nagkatuluyan, ano ang nangyayari sa barangay,
             at ano ang lagay ng bansa at ng ekonomiya. Ako ang laging nagtatanong:
-            Sino&apos;ng nagsabi? Ano&apos;ng nangyari? <em>Tapos ano?</em> Isa akong
-            proud na batang Marites. Pagkatapos, tatakbo ako sa loob para i-report lahat
+            Sino&apos;ng nagsabi? Ano&apos;ng nangyari? <em>Tapos ano?</em> Ako
+            &apos;yung tinatawag ngayong <em>Marites</em>: slang para sa chismosa ng kapitbahayan,
+            galing mismo sa tanong na lagi kong bungad,{" "}
+            <em>&ldquo;Mare, anong latest?&rdquo;</em> Pagkatapos, tatakbo ako sa loob para i-report lahat
             kay Nanay, ang lola ko, na nagluluto para sa buong extended family namin at
             hindi na masyadong lumalabas. Ako ang mga mata at tainga niya sa kalye. Siya
             ang nakakakuha ng balita; ako ang nagkukuwento.

@@ -63,7 +63,7 @@ export default function Home() {
           href="/about"
           className="mt-4 inline-block text-[1rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
         >
-          Read the full dispatch
+          Read my story
         </Link>
       </section>
 

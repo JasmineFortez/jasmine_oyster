@@ -58,7 +58,10 @@ export default function About() {
             broke up with who, who got together with who, what was going on in
             the barangay, and what was happening to the country and the economy.
             I asked all the questions: who said that? What happened next?{" "}
-            <em lang="tl">Tapos ano?</em> I was a proud little Marites. Then
+            <em lang="tl">Tapos ano?</em> I was what Filipinos now call a{" "}
+            <em lang="tl">Marites</em>: slang for the neighborhood gossip, from
+            the exact question I&apos;d walk up asking,{" "}
+            <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> Then
             I&apos;d run inside to report everything back to my nanay, my
             grandmother, who cooked for our whole extended family and didn&apos;t
             go out much anymore. I was her eyes and ears on the street. She got
