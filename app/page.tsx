@@ -65,9 +65,9 @@ export default function Home() {
 
       <div className="border-t-[3px] border-mark" />
 
-      {/* Selected work */}
+      {/* Top stories */}
       <section aria-labelledby="work" className="pt-10">
-        <SectionHeading id="work">Selected work</SectionHeading>
+        <SectionHeading id="work">Top stories</SectionHeading>
         <div className="mt-8 grid gap-12 md:grid-cols-3 md:gap-0">
           {featured.map((p, i) => (
             <div
