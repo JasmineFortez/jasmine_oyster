@@ -10,6 +10,7 @@ export type ArticleSection = {
   heading: string;
   paragraphs: string[];
   figure?: Figure; // optional image shown after the section's paragraphs
+  diagram?: "cash-handshake"; // optional built-in diagram shown after the paragraphs
 };
 
 export type Project = {
@@ -31,7 +32,7 @@ export const featured: Project[] = [
     kicker: "Variantz, Singapore",
     headline: "Building an Uber for handymen in eight weeks",
     role: "Application developer intern, Summer 2024",
-    body: "Co-developed Merchanex, an Uber-style handyman app, as two React Native apps in 8 weeks. I built the customer app's service browsing, with filters and sorting by star rating, and designed a cash payment confirmation flow. Earned a 2025 UCEAP Internship Award.",
+    body: "Co-developed Merchanex, an Uber-style handyman app, as two React Native apps in 8 weeks. I built the customer app's service browsing, sorted by distance with filters and star ratings, and designed a cash payment confirmation flow. Earned a 2025 UCEAP Internship Award.",
     stack: ["React Native", "TypeScript", "APIs"],
     links: [
       {
@@ -53,7 +54,7 @@ export const featured: Project[] = [
         heading: "What I owned: finding the right handyman",
         paragraphs: [
           "My main piece was the service browsing experience in the customer app. It's the first thing every customer touches before they book anything, so it had to make finding help feel easy.",
-          "I built filters so customers could narrow down services, and sorting by star rating so the best-reviewed providers showed up first.",
+          "By default, results are sorted by who's closest, because for a handyman, distance matters most. From there, customers can switch to sorting by star rating to see the best-reviewed providers first, or use filters to narrow down the services they need.",
         ],
       },
       {
@@ -62,6 +63,7 @@ export const featured: Project[] = [
           "A lot of handyman jobs get paid in cash, and cash never touches the app. That raised a real question: if the money changes hands in person, how do both sides know the payment actually happened?",
           "I designed a cash payment confirmation flow that works like a mutual handshake between the two apps: the customer and the provider each confirm the payment, and the booking is only marked complete once both have. Nobody has to take the other person's word for it.",
         ],
+        diagram: "cash-handshake",
       },
       {
         heading: "Building as a team",
