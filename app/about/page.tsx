@@ -34,70 +34,59 @@ export default function About() {
             &mdash; Before I wrote code, I wanted to be a reporter.
           </p>
           <p>
-            In elementary school in the Philippines, my friends and I were always
-            trading bugtong, quizzing each other, and eventually making up our
-            own.
+            In elementary school in the Philippines, my friends and I traded bugtong,
+            quizzing each other until we started making up our own.
           </p>
           <blockquote className="border-l-[3px] border-mark pl-5">
             <p lang="tl" className="italic">
-              Bugtong, bugtong: laging naka-pink at Hello Kitty headband, pero
-              laging late.
+              Bugtong, bugtong: laging naka-pink at Hello Kitty headband, pero laging late.
             </p>
             <p className="mt-1 text-[1.05rem] text-muted">
-              Riddle me this: always in pink with a Hello Kitty headband, but
-              always late. (The answer was me.)
+              Riddle me this: always in pink with a Hello Kitty headband, but always late.
+              (The answer was me.)
             </p>
           </blockquote>
           <p>
-            Chismis was how everyone connected, and it was part of my routine.
-            Every day after school, the titas would be outside by the ihawan,
-            grilling isaw, and I&apos;d walk right up:{" "}
-            <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> I was just a
-            kid, but I was part of that community, and nobody treated me
-            otherwise. We&apos;d talk about our days and cover everything: who
-            broke up with who, who got together with who, what was going on in
-            the barangay, and what was happening to the country and the economy.
-            I asked all the questions: who said that? What happened next?{" "}
-            <em lang="tl">Tapos ano?</em> I was what Filipinos now call a{" "}
-            <em lang="tl">Marites</em>: slang for the neighborhood gossip, from
-            the exact question I&apos;d walk up asking,{" "}
-            <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> Then
-            I&apos;d run inside to report everything back to my nanay, my
-            grandmother, who cooked for our whole extended family and didn&apos;t
-            go out much anymore. I was her eyes and ears on the street. She got
-            the news; I got to be the one who told it.
+            Chismis was how everyone connected. Every day after school, the titas would be
+            outside by the ihawan, grilling isaw, and I&apos;d walk right up:{" "}
+            <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> That question is where
+            Filipinos now get the word <em lang="tl">Marites</em>, slang for the
+            neighborhood gossip, and I was a proud little one. I was just a kid, but I was
+            part of that community. We covered everything: who broke up with who, who got
+            together, what was happening in the barangay, the country, the economy. My
+            question was always <em lang="tl">Tapos ano?</em>
           </p>
           <p>
-            I miss those days, when I knew everybody&apos;s business. I lost that
-            routine when we left home.
+            Then I&apos;d run inside and report it all to my nanay, my grandmother. She
+            cooked for our whole extended family, but at her age, she physically
+            couldn&apos;t go out anymore. So I brought the outside to her. I was her eyes
+            and ears on the street.
           </p>
           <p>
-            In the U.S., suddenly I was surrounded by jokes I didn&apos;t get. Everyone talked about classics I was
-            supposed to love, like <cite>The Notebook</cite>, and movies I&apos;d
-            never seen. Every book and conversation assumed background I
-            didn&apos;t have. Eventually I quietly gave up on reading. The girl
-            who used to make up her own riddles couldn&apos;t understand the
-            punchline anymore.
+            I miss knowing everybody&apos;s business. I lost that routine when we left home.
           </p>
           <p>
-            Math was different. It was unironically comforting, because it was
-            the one thing that stayed the same no matter the country. Logic was
-            absolute, and a semicolon meant the same thing in every language. So
+            In the U.S., suddenly I didn&apos;t get the jokes. Everyone talked about classics
+            I was supposed to love, like <cite>The Notebook</cite>, and movies I&apos;d never
+            seen. Eventually I quietly gave up on reading. The girl who used to make up her
+            own riddles couldn&apos;t follow the punchline anymore.
+          </p>
+          <p>
+            Math was different. It stayed the same no matter the country, and that was
+            unironically comforting. A semicolon meant the same thing in every language. So
             that&apos;s where I went.
           </p>
           <p>
-            There, I learned to tell stories a different way. At UC Santa Cruz I
-            earned my CS degree with a 3.79, then built a handyman app in
-            Singapore, researched AI for education, and designed a carpool app
-            from 24 student surveys. Every one of those started with the same
-            reporter&apos;s questions: who is this for, what&apos;s really going
-            on, and what&apos;s the story behind the numbers?
+            There, I learned to tell stories a different way. I earned my CS degree at UC
+            Santa Cruz with a 3.79, built a handyman app in Singapore, researched AI for
+            education, and designed a carpool app from 24 student surveys. Each one started
+            with a reporter&apos;s questions: who is this for, and what&apos;s the story
+            behind the numbers?
           </p>
           <p>
-            I never stopped being <em>chismosa</em>. I just changed the medium. I
-            write my READMEs in English and Tagalog. I treat documentation like
-            journalism. And I built this site like a newspaper, because that little
-            Marites by the ihawan deserved to finally get her byline.
+            I never stopped being <em>chismosa</em>. I just changed the medium. I write my
+            READMEs in English and Tagalog, and I built this site like a newspaper, because
+            that little Marites by the ihawan deserved her byline.
           </p>
         </div>
       </article>
