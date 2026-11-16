@@ -3,9 +3,9 @@
 // Each project gets its own article page at /stories/<slug>.
 // A project with a `tl` block also gets a Tagalog version at /stories/<slug>/tl.
 
-export type ProjectLink = { label: string; href: string };
+export type ProjectLink = { label: string; href: string; labelTl?: string };
 
-export type Figure = { src: string; alt: string; caption: string };
+export type Figure = { src: string; alt: string; caption: string; captionTl?: string };
 
 export type ArticleSection = {
   heading: string;
@@ -48,6 +48,7 @@ export const featured: Project[] = [
     links: [
       {
         label: "UCEAP award feature",
+        labelTl: "Basahin ang UCEAP feature",
         href: "https://uceap.universityofcalifornia.edu/awards/jasmine-fortez-internship-2025",
       },
     ],
@@ -90,6 +91,48 @@ export const featured: Project[] = [
         ],
       },
     ],
+    tl: {
+      headline: "Gumawa ng Uber para sa mga handyman sa loob ng walong linggo",
+      role: "Application developer intern, Summer 2024",
+      context:
+        "Ang Variantz ay isang startup sa Singapore. Sumali ako bilang application developer intern noong summer 2024 sa pamamagitan ng Summer Global Internship program ng UCEAP.",
+      article: [
+        {
+          heading: "Ang assignment",
+          paragraphs: [
+            "Ginagawa ng Variantz ang Merchanex, isang app na parang Uber pero para sa handyman services: naghahanap at nagbu-book ng tulong ang mga customer, at tinatanggap ng mga service provider ang mga trabaho. Ibig sabihin, dalawang app na kailangang magtulungan, isa para sa customers at isa para sa providers, na gagawin sa loob ng walong linggo.",
+            "Sumali ako sa isang team ng UI/UX designers at backend developers. Hindi pa ako nakakasulat ng React Native dati, kaya tinuruan ko ang sarili ko habang nagtatrabaho.",
+          ],
+        },
+        {
+          heading: "Ang hawak ko: paghahanap ng tamang handyman",
+          paragraphs: [
+            "Ang pangunahing ginawa ko ay ang service browsing experience sa customer app. Ito ang unang hinahawakan ng bawat customer bago sila mag-book, kaya dapat madali ang paghahanap ng tulong.",
+            "By default, naka-sort ang results ayon sa kung sino ang pinakamalapit, dahil para sa handyman, distansya ang pinakamahalaga. Mula doon, puwedeng lumipat ang customer sa pag-sort ayon sa star rating para makita muna ang may pinakamagandang reviews, o gumamit ng filters para paliitin ang mga serbisyong kailangan nila.",
+          ],
+        },
+        {
+          heading: "Ang problema sa cash",
+          paragraphs: [
+            "Maraming handyman job ang binabayaran nang cash, at hindi dumadaan sa app ang cash. Kaya may totoong tanong: kung personal na iniabot ang pera, paano malalaman ng dalawang panig na talagang nangyari ang bayad?",
+            "Nag-design ako ng cash payment confirmation flow na parang mutual handshake sa pagitan ng dalawang app: parehong kinukumpirma ng customer at ng provider ang bayad, at saka lang nagiging complete ang booking kapag pareho na silang nag-confirm. Walang kailangang umasa lang sa salita ng isa't isa.",
+          ],
+        },
+        {
+          heading: "Pagbuo bilang team",
+          paragraphs: [
+            "Bukod sa sarili kong features, tumulong ako sa map-based location tracking, provider ratings, at booking. Nakipagtrabaho ako sa backend developers para sa API integration, at sa mga designer para manatiling smooth at stable ang apps sa iba't ibang device.",
+            "Ginawa namin ang prototype sa isang mock database, para makausad ang apps kahit hindi pa handa ang totoong backend. Dinokumento ko rin ang mga proseso at CI/CD practices namin para madaling maituloy ng susunod na hahawak.",
+          ],
+        },
+        {
+          heading: "Ang natutunan ko",
+          paragraphs: [
+            "Ang pag-aral ng bagong framework nang mag-isa, may deadline, at nasa bagong bansa pa, iyon ang pinakanagustuhan ko. Iyon ang naglapit sa akin sa mobile at backend work. Nakakuha ang internship ng 2025 UCEAP Internship Award.",
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "tech4good-career-chatbot",
@@ -136,6 +179,46 @@ export const featured: Project[] = [
         ],
       },
     ],
+    tl: {
+      headline: "Tinuruan ang isang career chatbot na magbigay ng mas magandang sagot",
+      role: "GenAI researcher at education lead, 2025",
+      context:
+        "Ang Tech4Good Lab ng UC Santa Cruz ay pinamumunuan ni Prof. David Lee. Sumali ako bilang generative AI researcher at education lead mula Enero hanggang Hunyo 2025.",
+      article: [
+        {
+          heading: "Ang project",
+          paragraphs: [
+            "Gumagawa ang lab ng career chatbot para tulungan ang mga UCSC student na alamin ang susunod nilang hakbang. Gumamit ito ng totoong interviews ng mga taong magkakaiba ang career: may diretso ang landas, may nag-iba ng direksyon sa gitna, at may nag-trade school imbes na four-year na kurso.",
+            "Iyon talaga ang punto ng iba't ibang kuwento. Ang estudyanteng hindi pasok sa karaniwang hulma ay dapat makahanap pa rin ng taong kahawig ng kuwento niya.",
+          ],
+        },
+        {
+          heading: "Paano ito gumagana",
+          paragraphs: [
+            "Gumagamit ang chatbot ng retrieval-augmented generation (RAG). Bago ito sumagot, hinahanap muna nito sa mga interview ang pinakatugma sa tanong ng estudyante, at ibinibigay ang mga iyon sa AI kasama ng tanong. Dahil dito, nakabase ang sagot sa karanasan ng totoong tao, hindi sa generic na advice.",
+          ],
+        },
+        {
+          heading: "Ang ginawa ko",
+          paragraphs: [
+            "Gamit ang LangChain at OpenAI API, inayos ko ang dalawang bahagi na nagdedesisyon kung gaano kaganda ang sagot: kung gaano kahusay mahanap ng chatbot ang tamang interviews para sa bawat tanong, at ang prompt na nagsasabi sa AI kung paano gamitin ang mga iyon.",
+          ],
+        },
+        {
+          heading: "Paano namin nalaman na gumanda ito",
+          paragraphs: [
+            "Madali lang magpalit ng prompt. Ang mahirap ay malaman kung talagang gumanda ang sagot. Sinuri namin ang mga sagot sa dalawang paraan: LLM scoring, kung saan ibang model ang nagmamarka sa bawat sagot ayon sa mga itinakdang metrics, at ang sarili kong review, kung saan binabasa ko mismo ang mga sagot.",
+            "Nahuhuli ng bawat isa ang nalalampasan ng isa. Kayang i-check ng automated scoring ang maraming sagot nang mabilis, at nahuli ng pagbabasa ko ang mga bagay na hindi nakikita ng score, gaya ng sagot na mukhang sigurado pero hindi naman talaga nakakatulong.",
+          ],
+        },
+        {
+          heading: "Pagtuturo nito",
+          paragraphs: [
+            "Bilang education lead ng lab, nagturo ako ng lab sections para sa mahigit 40 engineering students tungkol sa vector retrieval, prompt engineering, at kung paano suriin ang ibinibigay ng isang LLM. Ang pagpapaliwanag ng mga ideyang ito sa iba ang nagpalalim ng pag-intindi ko.",
+          ],
+        },
+      ],
+    },
   },
   {
     slug: "omw-carpool",
@@ -147,9 +230,10 @@ export const featured: Project[] = [
     links: [
       {
         label: "Figma prototype",
+        labelTl: "Tingnan ang Figma prototype",
         href: "https://www.figma.com/proto/lgxVNDn9c3hTZZrImHnRy2/Untitled?page-id=0%3A1&node-id=1-2&viewport=451%2C196%2C0.2&t=9fJHaDbRoMlEKHi6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2",
       },
-      { label: "Full pitch deck (PDF)", href: "/stories/omw/omw-pitch-deck.pdf" },
+      { label: "Full pitch deck (PDF)", labelTl: "Buong pitch deck (PDF)", href: "/stories/omw/omw-pitch-deck.pdf" },
     ],
     context:
       "The MESA Idea Accelerator starts with a one-week, in-person course in human-centered design, followed by about two months of remote work to research, build, and pitch an idea. It's sponsored by Edwards Lifesciences, Keysight Technologies, and the Society for Information Management (SIM).",
@@ -157,6 +241,7 @@ export const featured: Project[] = [
       src: "/stories/omw/slide-01.webp",
       alt: "Title slide: OMW, On time. Matched. Weekly. Presented by Jasmine Fortez and Andrew Solis at MESA Idea Accelerator 2026.",
       caption: "The opening slide of our MESA Idea Accelerator 2026 pitch.",
+      captionTl: "Ang unang slide ng pitch namin sa MESA Idea Accelerator 2026.",
     },
     article: [
       {
@@ -176,6 +261,7 @@ export const featured: Project[] = [
           src: "/stories/omw/slide-03.webp",
           alt: "Survey results slide: 92% (22 of 24 students) have been passed by a full bus, 10 got passed 6 or more times; 67% (16 of 24) don't have regular car access; 5 of 8 students with a car still ride the bus.",
           caption: "Our survey of 24 UCSC students.",
+          captionTl: "Ang survey namin sa 24 na UCSC student.",
         },
       },
       {
@@ -194,6 +280,7 @@ export const featured: Project[] = [
           src: "/stories/omw/slide-07.webp",
           alt: "Slide titled Redefining On My Way, with three columns: On time, Matched, Weekly, each describing one of OMW's promises.",
           caption: "OMW's three promises: on time, matched, weekly.",
+          captionTl: "Ang tatlong pangako ng OMW: on time, matched, weekly.",
         },
       },
       {
@@ -212,6 +299,56 @@ export const featured: Project[] = [
         ],
       },
     ],
+    tl: {
+      headline: "Kapag nilagpasan ka ng bus: isang weekly carpool app para sa mga UCSC student",
+      role: "Project lead: gumawa ng prototype at pitch, kasama si Andrew Solis",
+      context:
+        "Nagsisimula ang MESA Idea Accelerator sa isang linggong in-person na course sa human-centered design, kasunod ang mga dalawang buwang remote work para mag-research, bumuo, at mag-pitch ng isang ideya. Sponsored ito ng Edwards Lifesciences, Keysight Technologies, at Society for Information Management (SIM).",
+      article: [
+        {
+          heading: "2:20 p.m. sa Baskin Circle",
+          paragraphs: [
+            "Kakatapos lang ng Discrete Math, at may shift ka sa downtown nang 3:00. Dumating ang Line 18 at nilagpasan ka lang, punong-puno hanggang pinto. Ang pagpipilian mo: maghintay ng 35 minuto at ma-late, o magbayad ng $25 sa Uber.",
+            "Para sa maraming UC Santa Cruz student, hindi ito hypothetical. Normal na Martes lang ito.",
+          ],
+        },
+        {
+          heading: "Ang nalaman namin",
+          paragraphs: [
+            "Nag-survey kami ng 24 na estudyante. 22 sa kanila ang nalagpasan na ng punong bus, at 10 ang nalagpasan nang anim na beses o higit pa. 16 ang walang regular na access sa kotse, at kahit sa mga may kotse, 5 sa 8 ang sumasakay pa rin ng bus.",
+            "Pinakatinamaan ang mga walang kotse: 9 sa 16 ang hindi nakapasok sa trabaho dahil sa transit, kumpara sa 2 sa 8 na may kotse. Sabi sa amin ng isang MESA counselor, nakakita na siya ng mga estudyanteng pumipili ng klase ayon sa schedule ng bus imbes na kung ano talaga ang gusto nilang pag-aralan.",
+          ],
+        },
+        {
+          heading: "Bakit kulang ang mga existing na option",
+          paragraphs: [
+            "Ipinapakita ng mga bus tracker gaya ng Google Maps, Transit, METRO Real-Time, at SlugLoop kung nasaan ang bus, pero hindi kung may puwesto pa. Masyadong mahal ang Uber at Lyft para sa araw-araw na biyahe papunta sa part-time job. Ang mga carpool board sa Facebook at Reddit ay para sa weekend na pag-uwi, at kadalasan patay na.",
+          ],
+        },
+        {
+          heading: "Ang dinesign ko",
+          paragraphs: [
+            "Ang OMW, short for “on my way,” ay nakabase sa tatlong pangako. On time: naka-save na ang upuan mo bago ka pa umalis sa klase, kaya hindi ka mala-late dahil sa punong bus. Matched: ipapares ka sa isang verified na UCSC student sa ruta mo na pareho ang dealbreakers mo, gaya ng tahimik na biyahe o bawal manigarilyo. Weekly: isang beses mo lang ise-set ang schedule mo at iisang tao ang kasabay mo bawat linggo, walang posting at walang paghihintay kung may sasagot.",
+            "Sa gitna ng program, umalis ang orihinal naming team lead. Imbes na hayaang huminto ang project, ako ang tumayong lead, at ginawa ko ang Figma prototype at ang pitch kasama ang teammate kong si Andrew Solis.",
+          ],
+        },
+        {
+          heading: "Bakit parang dating app",
+          paragraphs: [
+            "Alam na ng mga estudyante kung paano maghanap ng match sa phone nila. Ginagawa nila iyon sa Tinder at Hinge. Kaya imbes na gumawa ng bagong interface, hiniram ko ang alam na nila: isang matching screen at compatibility percentage na nagpapakita kung gaano kayo katugma ng isang driver, base sa mga bagay gaya ng ruta at dealbreakers mo.",
+            "Walang kailangang mag-aral ng bagong app para gamitin ito, at nagiging masaya ang paghahanap ng carpool imbes na pabigat.",
+          ],
+        },
+        {
+          heading: "Ang gagawin ko nang iba",
+          paragraphs: [
+            "Hindi kami nanalo sa accelerator, at sa pagbabalik-tanaw, alam ko kung bakit. Ginawa ko ang research sa problema: nag-survey ako ng 24 na estudyante, kinausap ang isang MESA counselor, at tiningnan ang bawat option na meron na ang mga estudyante, mula sa bus trackers hanggang Uber at carpool boards. Sa huli, naintindihan ko nang buo kung bakit naiistranded ang mga estudyante.",
+            "Ang hindi ko nagawa ay subukan ang sagot ko. Hindi ko tinanong ang mga estudyante kung talagang gagamitin nila ang OMW. Magtitiwala ba sila sa ibang estudyante na isakay sila bawat linggo? Magsa-sign up ba ang mga driver? Dinesign ko ang solusyon bago ko ito sinubukan sa mga taong para dito.",
+            "Sa susunod, ipapakita ko agad ang isang rough prototype sa mga estudyante at driver, bago pa pakinisin ang pitch. May isang malaking binago rin ang research sa pag-iisip ko: hindi lang trabaho ang nawawala sa mga estudyante dahil sa transit, hinuhubog din nito kung anong klase ang kinukuha nila.",
+          ],
+        },
+      ],
+    },
   },
 ];
 
@@ -225,7 +362,7 @@ export const aiBuilds: Project[] = [
     body: "When BAIA wanted a STEM curriculum for elementary-school girls, I volunteered to build it: three weeks in Scratch that move from \u201cI do\u201d (learning the basics) to \u201cwe do\u201d (building a project together) to \u201cyou do\u201d (each girl's own project).",
     stack: ["Scratch", "React", "Vercel", "AI-assisted"],
     links: [
-      { label: "Visit the live site", href: "https://baia-code-confidence.vercel.app" },
+      { label: "Visit the live site", labelTl: "Bisitahin ang site", href: "https://baia-code-confidence.vercel.app" },
     ],
     context:
       "Beautiful As I Am (BAIA) is a youth mentorship nonprofit in Washington, D.C. I started there as a communications and programs intern and later became its software developer.",

@@ -16,7 +16,15 @@ const ui = {
 } as const;
 
 // Slides and screenshots are 16:9, like a photo in a news story.
-function StoryFigure({ figure, priority = false }: { figure: Figure; priority?: boolean }) {
+function StoryFigure({
+  figure,
+  lang,
+  priority = false,
+}: {
+  figure: Figure;
+  lang: Lang;
+  priority?: boolean;
+}) {
   return (
     <figure className="mt-8">
       <Image
@@ -28,7 +36,9 @@ function StoryFigure({ figure, priority = false }: { figure: Figure; priority?: 
         sizes="(min-width: 768px) 720px, 100vw"
         className="w-full rounded-sm border border-rule"
       />
-      <figcaption className="mt-2 text-[0.95rem] italic text-muted">{figure.caption}</figcaption>
+      <figcaption className="mt-2 text-[0.95rem] italic text-muted">
+        {lang === "tl" ? (figure.captionTl ?? figure.caption) : figure.caption}
+      </figcaption>
     </figure>
   );
 }
@@ -78,7 +88,7 @@ export default function StoryArticle({ project, lang }: { project: Project; lang
         </ul>
       </div>
 
-      {project.leadImage && <StoryFigure figure={project.leadImage} priority />}
+      {project.leadImage && <StoryFigure figure={project.leadImage} lang={lang} priority />}
 
       <div className="mt-10 space-y-10">
         {project.article.map((section, i) => {
@@ -93,9 +103,9 @@ export default function StoryArticle({ project, lang }: { project: Project; lang
                   <p key={j}>{para}</p>
                 ))}
               </div>
-              {section.figure && <StoryFigure figure={section.figure} />}
-              {section.diagram === "cash-handshake" && <CashHandshakeDiagram />}
-              {section.diagram === "rag-pipeline" && <RagDiagram />}
+              {section.figure && <StoryFigure figure={section.figure} lang={lang} />}
+              {section.diagram === "cash-handshake" && <CashHandshakeDiagram lang={lang} />}
+              {section.diagram === "rag-pipeline" && <RagDiagram lang={lang} />}
             </section>
           );
         })}
@@ -105,10 +115,10 @@ export default function StoryArticle({ project, lang }: { project: Project; lang
         <div className="mt-12 border-t border-rule pt-6">
           <h2 className="text-[1rem] italic text-muted">{t.seeWork}</h2>
           <ul className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-[1.05rem]">
-            {links.map(({ label, href }) => (
+            {links.map(({ label, labelTl, href }) => (
               <li key={label}>
                 <a href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                  {label}
+                  {lang === "tl" ? (labelTl ?? label) : label}
                 </a>
               </li>
             ))}

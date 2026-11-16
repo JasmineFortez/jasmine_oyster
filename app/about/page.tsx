@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "How a kid who wanted to be a reporter in the Philippines became a software engineer.",
+  alternates: { languages: { tl: "/about/tl" } },
 };
 
 export default function About() {
@@ -13,9 +15,17 @@ export default function About() {
         <h1 className="border-b-[3px] border-mark pb-8 text-[clamp(2.5rem,7vw,4.25rem)] leading-[0.98] font-medium tracking-[-0.02em] [font-variation-settings:'opsz'_72]">
           The dispatch
         </h1>
-        <p className="mt-4 text-[0.95rem] italic text-muted">
-          By Jasmine Fortez
-        </p>
+        <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
+          <p className="text-[0.95rem] italic text-muted">By Jasmine Fortez</p>
+          <Link
+            href="/about/tl"
+            hrefLang="tl"
+            lang="tl"
+            className="text-[0.95rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
+          >
+            Basahin sa Tagalog
+          </Link>
+        </div>
         <div className="mt-8 max-w-[34em] space-y-6 text-[1.2rem] leading-[1.7]">
           <p>
             <span className="font-medium tracking-wide [font-variant-caps:small-caps]">
