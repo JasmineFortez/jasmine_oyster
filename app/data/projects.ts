@@ -256,7 +256,7 @@ export const aiBuilds: Project[] = [
       {
         heading: "What's next",
         paragraphs: [
-          "The site is live, but it hasn't launched to the girls yet. Before it does, I'm cleaning up the code and writing a bilingual README, in English and Tagalog, that explains what I directed, what the AI wrote, and what I changed.",
+          "The curriculum didn't launch with the girls this time. Instead of letting it sit, I'm building a 2.0, aiming for a launch next summer. That means cleaning up the code, sharpening the lessons, and writing a bilingual README, in English and Tagalog, that explains what I directed, what the AI wrote, and what I changed.",
         ],
       },
     ],
