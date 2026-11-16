@@ -248,9 +248,9 @@ export const aiBuilds: Project[] = [
       },
       {
         heading: "How I used AI",
-        // TODO: which AI tool, what you asked it to do, and one thing it got wrong that you fixed
         paragraphs: [
-          "I built the site in React with an AI-assisted workflow and deployed it on Vercel. I decided what the curriculum taught, how each lesson was structured, and how the site should feel. AI helped me build it quickly.",
+          "This was my first project built with an AI coding agent. I used Claude Code to build the React site and deployed it on Vercel. I decided what the curriculum taught, how the three weeks were structured, and how the site should look and feel. Claude Code helped me turn that into working pages quickly.",
+          "Being my first time, I learned a lot about how to work with an AI. The site worked, but the code wasn't as clean as I'd want if someone else had to maintain it. That's the real lesson: AI can get you to a working version fast, but you're still responsible for understanding and cleaning up what it writes.",
         ],
       },
       {
