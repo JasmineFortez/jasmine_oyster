@@ -109,7 +109,7 @@ export const featured: Project[] = [
       { label: "Full pitch deck (PDF)", href: "/stories/omw/omw-pitch-deck.pdf" },
     ],
     context:
-      "The MESA Idea Accelerator is a one-week course at UC Santa Cruz that teaches human-centered design, sponsored by Edwards Lifesciences, Keysight Technologies, and the Society for Information Management (SIM).",
+      "The MESA Idea Accelerator starts with a one-week, in-person course in human-centered design, followed by about two months of remote work to research, build, and pitch an idea. It's sponsored by Edwards Lifesciences, Keysight Technologies, and the Society for Information Management (SIM).",
     leadImage: {
       src: "/stories/omw/slide-01.webp",
       alt: "Title slide: OMW, On time. Matched. Weekly. Presented by Jasmine Fortez and Andrew Solis at MESA Idea Accelerator 2026.",
