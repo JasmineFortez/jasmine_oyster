@@ -60,7 +60,7 @@ export const featured: Project[] = [
         heading: "The cash problem",
         paragraphs: [
           "A lot of handyman jobs get paid in cash, and cash never touches the app. That raised a real question: if the money changes hands in person, how do both sides know the payment actually happened?",
-          "I designed a cash payment confirmation flow between the customer and provider apps, so both sides confirm the payment before a booking is marked complete. Nobody has to take the other person's word for it.",
+          "I designed a cash payment confirmation flow that works like a mutual handshake between the two apps: the customer and the provider each confirm the payment, and the booking is only marked complete once both have. Nobody has to take the other person's word for it.",
         ],
       },
       {
