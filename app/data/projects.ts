@@ -1,6 +1,7 @@
 // All project content lives here, so you can edit copy without touching layout.
 // Leave a link's href empty ("") and it won't render until you fill it in.
 // Each project gets its own article page at /stories/<slug>.
+// A project with a `tl` block also gets a Tagalog version at /stories/<slug>/tl.
 
 export type ProjectLink = { label: string; href: string };
 
@@ -11,6 +12,15 @@ export type ArticleSection = {
   paragraphs: string[];
   figure?: Figure; // optional image shown after the section's paragraphs
   diagram?: "cash-handshake" | "rag-pipeline"; // optional built-in diagram shown after the paragraphs
+};
+
+// Tagalog version of a story. Sections line up with the English ones by order,
+// so figures and diagrams are reused from the English sections.
+export type TagalogStory = {
+  headline: string;
+  role: string;
+  context?: string;
+  article: { heading: string; paragraphs: string[] }[];
 };
 
 export type Project = {
@@ -24,6 +34,7 @@ export type Project = {
   context?: string; // optional short note under the byline explaining the program or company
   leadImage?: Figure; // optional image at the top of the full story
   article: ArticleSection[]; // the full story
+  tl?: TagalogStory; // optional Tagalog version
 };
 
 export const featured: Project[] = [
@@ -260,6 +271,54 @@ export const aiBuilds: Project[] = [
         ],
       },
     ],
+    tl: {
+      headline: "I do, we do, you do: tatlong linggong coding curriculum para sa mga batang babae",
+      role: "Volunteer curriculum designer at developer",
+      context:
+        "Ang Beautiful As I Am (BAIA) ay isang youth mentorship nonprofit sa Washington, D.C. Nagsimula ako doon bilang communications and programs intern, at kalaunan ay naging software developer nila.",
+      article: [
+        {
+          heading: "Bakit ito ginawa",
+          paragraphs: [
+            "Gusto ng leader ng BAIA ng STEM curriculum para sa mga batang babae sa elementary na kasali sa program, at gusto niyang tumagal ito ng tatlong linggo. Nag-volunteer ako na gawin ito.",
+            "Karamihan sa kanila, hindi pa nakakapag-code kahit kailan. Hindi naman goal na gawin silang programmer sa loob ng tatlong linggo. Ang goal ay umuwi silang iniisip, \u201cKaya ko 'to.\u201d",
+          ],
+        },
+        {
+          heading: "I do, we do, you do",
+          paragraphs: [
+            "Binuo ko ang tatlong linggo sa isang klasikong paraan ng pagtuturo, isang linggo bawat hakbang. Sa unang linggo, \u201cI do\u201d: pinag-aaralan ng mga bata ang basic coding concepts. Sa ikalawang linggo, \u201cwe do\u201d: sabay-sabay kaming gumagawa ng project. Sa ikatlong linggo, \u201cyou do\u201d: gumagawa ang bawat isa ng sarili niyang project.",
+            "Para sa beginner, mahalaga ang ganitong pagkakasunod-sunod. Walang itinatapon agad sa malalim, at pagdating ng oras na mag-isa na silang gagawa, nagawa na nila ito dati nang may gumagabay. Dito galing ang pangalan: ginawa ang buong curriculum para lumaki ang kumpiyansa nila, paunti-unti. Siniguro kong sumusunod ang bawat lesson sa ganitong structure.",
+          ],
+        },
+        {
+          heading: "Coding gamit ang Scratch",
+          paragraphs: [
+            "Gumagamit ang mga lesson ng Scratch, kung saan pinagdudugtong ng mga bata ang makukulay na code blocks imbes na mag-type. Dahil dito, nakakapag-focus sila sa kung paano mag-isip ang code, gaya ng loops, events, at mga hakbang na sunod-sunod, nang hindi naiipit sa typos.",
+            "Sinadya kong gawing makulay ang curriculum. Para sa mga batang babae sa elementary, dapat parang laro ito, hindi parang homework.",
+          ],
+        },
+        {
+          heading: "Ginawa para maramdamang BAIA",
+          paragraphs: [
+            "Gusto kong maramdaman na parte ng BAIA community ang site, hindi hiwalay na tool. Ako mismo ang nag-design ng events page, at isinulat ko ang main button, \u201cJoin the Village,\u201d para tumugma sa sariling slogan ng BAIA.",
+          ],
+        },
+        {
+          heading: "Paano ko ginamit ang AI",
+          paragraphs: [
+            "Ito ang una kong project na ginawa gamit ang isang AI coding agent. Gumamit ako ng Claude Code para buuin ang React site, at ni-deploy ko ito sa Vercel. Ako ang nagdesisyon kung ano ang ituturo ng curriculum, paano hahatiin ang tatlong linggo, at ano ang itsura at pakiramdam ng site. Tinulungan ako ng Claude Code na gawin itong gumaganang pages nang mabilis.",
+            "Dahil first time ko, ang dami kong natutunan sa pakikipagtrabaho sa AI. Gumana ang site, pero hindi ganoon kalinis ang code kung ibang tao ang magme-maintain nito. Iyon ang tunay na aral: kaya kang dalhin ng AI sa isang working version nang mabilis, pero ikaw pa rin ang responsable na intindihin at linisin ang isinulat nito.",
+          ],
+        },
+        {
+          heading: "Ano ang susunod",
+          paragraphs: [
+            "Hindi na-launch ang curriculum sa mga bata ngayon. Imbes na hayaan lang, gumagawa ako ng 2.0, at target kong i-launch ito sa susunod na summer. Ibig sabihin, lilinisin ko ang code, aayusin ang mga lesson, at magsusulat ng bilingual README, sa English at Tagalog, na nagpapaliwanag kung ano ang dinirekta ko, ano ang isinulat ng AI, at ano ang binago ko.",
+          ],
+        },
+      ],
+    },
   },
 ];
 
