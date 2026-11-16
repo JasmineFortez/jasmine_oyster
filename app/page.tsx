@@ -18,7 +18,7 @@ export default function Home() {
       {/* Masthead */}
       <header className="pt-12 sm:pt-16">
         <div className="hidden items-end justify-between text-[0.9rem] italic text-muted sm:flex">
-          <p>Est. Santa Cruz, Calif.</p>
+          <p>Est. in the Philippines</p>
           {/* Light mode is the morning paper; dark mode is the late edition */}
           <p>
             <span className="dark:hidden">Morning edition</span>
