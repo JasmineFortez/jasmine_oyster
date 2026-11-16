@@ -29,22 +29,24 @@ export const featured: Project[] = [
   },
   {
     kicker: "Tech4Good Lab, UC Santa Cruz",
-    headline: "Teaching with retrieval: generative AI research for education",
+    headline: "Teaching a career chatbot to give better answers",
     role: "GenAI researcher and education lead",
-    // TODO: one sentence on what your RAG system did and what you built in it
-    body: "Researched retrieval-augmented generation (RAG) for education in UCSC's Tech4Good lab, and led the lab's education work.",
+    // TODO: add one result if you have it (e.g. what improved after your prompt changes)
+    body: "Refined prompts for a retrieval-augmented generation (RAG) career chatbot that helps UCSC students, and taught generative AI course sections under Prof. David Lee.",
     stack: ["Python", "LLMs", "RAG"],
     links: [{ label: "Repo or paper", href: "" }],
   },
   {
     kicker: "MESA Idea Accelerator, UC Santa Cruz",
-    headline: "When 92% of buses pass you by: designing a student carpool app",
-    role: "Product and UX lead",
-    body: "Synthesized 24 student surveys around a 92% campus bus pass-by rate and designed OMW, an interactive flow that matches commuters into carpools.",
-    stack: ["Figma", "User research"],
+    headline: "When the bus drives right past you: a weekly carpool app for UCSC students",
+    role: "Co-creator, with Andrew Solis",
+    body: "Surveyed 24 students: 22 had been passed by a full bus, and students without cars missed twice as many jobs. Designed OMW, which pairs you with a verified UCSC student on your route every week, so a full bus can't make you late.",
+    stack: ["Figma", "User research", "Surveys"],
     links: [
-      // TODO: paste the public Figma prototype URL
-      { label: "See the Figma prototype", href: "" },
+      {
+        label: "Figma prototype",
+        href: "https://www.figma.com/proto/lgxVNDn9c3hTZZrImHnRy2/Untitled?page-id=0%3A1&node-id=1-2&viewport=451%2C196%2C0.2&t=9fJHaDbRoMlEKHi6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2",
+      },
     ],
   },
 ];
