@@ -40,16 +40,27 @@ export default function About() {
             </p>
           </blockquote>
           <p>
-            Chismis was how everyone connected. I&apos;d come home from school to
-            find the titas outside, grilling isaw and talking about life.
-            I&apos;d stand there and listen, and I felt like I belonged, like I
-            knew everything. Then I&apos;d run inside to report it all back to my
-            nanay, who was home cooking for our whole household. She got the
-            news; I got to be the one who told it.
+            Chismis was how everyone connected, and it was part of my routine.
+            Every day after school, the titas would be outside by the ihawan,
+            grilling isaw, and I&apos;d walk right up:{" "}
+            <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> I was just a
+            kid, but I was part of that community, and nobody treated me
+            otherwise. We&apos;d talk about our days and cover everything: who
+            broke up with who, who got together with who, what was going on in
+            the barangay, and what was happening to the country and the economy.
+            I asked all the questions: who said that? What happened next?{" "}
+            <em lang="tl">Tapos ano?</em> I was a proud little Marites. Then
+            I&apos;d run inside to report everything back to my nanay, my
+            grandmother, who cooked for our whole extended family and didn&apos;t
+            go out much anymore. I was her eyes and ears on the street. She got
+            the news; I got to be the one who told it.
           </p>
           <p>
-            Then my family moved to the U.S., and suddenly I was surrounded by
-            jokes I didn&apos;t get. Everyone talked about classics I was
+            I miss those days, when I knew everybody&apos;s business. I lost that
+            routine when we left home.
+          </p>
+          <p>
+            In the U.S., suddenly I was surrounded by jokes I didn&apos;t get. Everyone talked about classics I was
             supposed to love, like <cite>The Notebook</cite>, and movies I&apos;d
             never seen. Every book and conversation assumed background I
             didn&apos;t have. Eventually I quietly gave up on reading. The girl
@@ -63,7 +74,7 @@ export default function About() {
             that&apos;s where I went.
           </p>
           <p>
-            That            So I learned to tell stories a different way. At UC Santa Cruz Iapos;s where I learned to tell stories a different way. At UC Santa Cruz I
+            There, I learned to tell stories a different way. At UC Santa Cruz I
             earned my CS degree with a 3.79, then built a handyman app in
             Singapore, researched AI for education, and designed a carpool app
             from 24 student surveys. Every one of those started with the same
@@ -73,8 +84,8 @@ export default function About() {
           <p>
             I never stopped being <em>chismosa</em>. I just changed the medium. I
             write my READMEs in English and Tagalog. I treat documentation like
-            journalism. And I built this site like a newspaper, because that kid
-            standing by the ihaw deserved to finally get her byline.
+            journalism. And I built this site like a newspaper, because that little
+            Marites by the ihawan deserved to finally get her byline.
           </p>
         </div>
         <div className="mt-14 border-t border-rule pt-8">

@@ -83,10 +83,10 @@ export default function Home() {
                 The dispatch
               </h2>
               <p className="mt-4 text-[1.05rem] leading-[1.65]">
-                Before I wrote code, I wanted to be a reporter. I&apos;d come
-                home from school to find the titas outside, grilling isaw and
-                talking about life, then run inside to report it all back to my
-                nanay.
+                Before I wrote code, I wanted to be a reporter. Every day after
+                school, I&apos;d find the titas by the ihawan and ask,{" "}
+                <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> Then I&apos;d
+                run inside to report it all back to my nanay.
               </p>
               <Link
                 href="/about"
