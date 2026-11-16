@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { allProjects } from "../../data/projects";
+import { allProjects, type Figure } from "../../data/projects";
 
 // Prerender one page per story. Unknown slugs fall through to notFound() below.
 export function generateStaticParams() {
@@ -14,6 +15,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = allProjects.find((p) => p.slug === slug);
   return project ? { title: project.headline, description: project.body } : {};
+}
+
+// Slides and screenshots are 16:9, like a photo in a news story.
+function StoryFigure({ figure, priority = false }: { figure: Figure; priority?: boolean }) {
+  return (
+    <figure className="mt-8">
+      <Image
+        src={figure.src}
+        alt={figure.alt}
+        width={1600}
+        height={900}
+        priority={priority}
+        sizes="(min-width: 768px) 720px, 100vw"
+        className="w-full rounded-sm border border-rule"
+      />
+      <figcaption className="mt-2 text-[0.95rem] italic text-muted">
+        {figure.caption}
+      </figcaption>
+    </figure>
+  );
 }
 
 const linkClass =
@@ -51,17 +72,20 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
           </ul>
         </div>
 
-        <div className="mt-10 max-w-[34em] space-y-10">
+        {project.leadImage && <StoryFigure figure={project.leadImage} priority />}
+
+        <div className="mt-10 space-y-10">
           {project.article.map((section) => (
             <section key={section.heading}>
-              <h2 className="text-[1.45rem] leading-tight font-semibold tracking-tight">
+              <h2 className="max-w-[34em] text-[1.45rem] leading-tight font-semibold tracking-tight">
                 {section.heading}
               </h2>
-              <div className="mt-3 space-y-5 text-[1.2rem] leading-[1.7]">
+              <div className="mt-3 max-w-[34em] space-y-5 text-[1.2rem] leading-[1.7]">
                 {section.paragraphs.map((para, i) => (
                   <p key={i}>{para}</p>
                 ))}
               </div>
+              {section.figure && <StoryFigure figure={section.figure} />}
             </section>
           ))}
         </div>

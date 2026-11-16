@@ -4,7 +4,13 @@
 
 export type ProjectLink = { label: string; href: string };
 
-export type ArticleSection = { heading: string; paragraphs: string[] };
+export type Figure = { src: string; alt: string; caption: string };
+
+export type ArticleSection = {
+  heading: string;
+  paragraphs: string[];
+  figure?: Figure; // optional image shown after the section's paragraphs
+};
 
 export type Project = {
   slug: string; // URL for the full story: /stories/<slug>
@@ -14,6 +20,7 @@ export type Project = {
   body: string; // front-page teaser: one or two sentences
   stack: string[];
   links: ProjectLink[];
+  leadImage?: Figure; // optional image at the top of the full story
   article: ArticleSection[]; // the full story
 };
 
@@ -98,7 +105,13 @@ export const featured: Project[] = [
         label: "Figma prototype",
         href: "https://www.figma.com/proto/lgxVNDn9c3hTZZrImHnRy2/Untitled?page-id=0%3A1&node-id=1-2&viewport=451%2C196%2C0.2&t=9fJHaDbRoMlEKHi6-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2",
       },
+      { label: "Full pitch deck (PDF)", href: "/stories/omw/omw-pitch-deck.pdf" },
     ],
+    leadImage: {
+      src: "/stories/omw/slide-01.webp",
+      alt: "Title slide: OMW, On time. Matched. Weekly. Presented by Jasmine Fortez and Andrew Solis at MESA Idea Accelerator 2026.",
+      caption: "The opening slide of our MESA Idea Accelerator 2026 pitch.",
+    },
     article: [
       {
         heading: "2:20 p.m. at Baskin Circle",
@@ -113,6 +126,11 @@ export const featured: Project[] = [
           "We surveyed 24 students. 22 of them had been passed by a full bus, and 10 had been passed six or more times. 16 didn't have regular access to a car, and even among students with cars, 5 of 8 still rode the bus.",
           "Students without cars were hit hardest: 9 of 16 had missed work because of transit, compared with 2 of 8 students who had cars. A MESA counselor told us she'd seen students pick classes around bus schedules instead of what they actually wanted to study.",
         ],
+        figure: {
+          src: "/stories/omw/slide-03.webp",
+          alt: "Survey results slide: 92% (22 of 24 students) have been passed by a full bus, 10 got passed 6 or more times; 67% (16 of 24) don't have regular car access; 5 of 8 students with a car still ride the bus.",
+          caption: "Our survey of 24 UCSC students.",
+        },
       },
       {
         heading: "Why existing options fall short",
@@ -126,6 +144,11 @@ export const featured: Project[] = [
           "OMW, short for “on my way,” is built on three promises. On time: your seat is saved before you leave class, so a full bus can't make you late. Matched: you're paired with a verified UCSC student on your route who shares your dealbreakers, like a quiet ride or no smoking. Weekly: you set your schedule once and ride with the same person every week, with no posting and no hoping someone replies.",
           "I led the project with my teammate Andrew Solis, and I built the Figma prototype and the pitch.",
         ],
+        figure: {
+          src: "/stories/omw/slide-07.webp",
+          alt: "Slide titled Redefining On My Way, with three columns: On time, Matched, Weekly, each describing one of OMW's promises.",
+          caption: "OMW's three promises: on time, matched, weekly.",
+        },
       },
       {
         heading: "The plan, and what I'd change",
