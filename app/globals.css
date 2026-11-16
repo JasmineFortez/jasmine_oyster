@@ -7,16 +7,42 @@
   --muted: #6e685f;
   --rule: #e2ddd3;
   --mark: #be185d;
+  color-scheme: light;
 }
 
-/* Late edition: warm plum-black paper, pink turned up */
+/* Late edition: warm plum-black paper, pink turned up.
+   A small script in layout.tsx sets data-theme on <html> before the page paints:
+   the visitor's saved choice from the toggle, or else their system setting.
+   The media query is a fallback for visitors without JavaScript. */
+[data-theme="dark"] {
+  --paper: #171318;
+  --ink: #f3ede8;
+  --muted: #a69c98;
+  --rule: #332c33;
+  --mark: #f472b6;
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --paper: #171318;
     --ink: #f3ede8;
     --muted: #a69c98;
     --rule: #332c33;
     --mark: #f472b6;
+    color-scheme: dark;
+  }
+}
+
+/* `dark:` utilities follow the same rule as the colors above */
+@custom-variant dark {
+  &:where([data-theme="dark"], [data-theme="dark"] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme]), :root:not([data-theme]) *) {
+      @slot;
+    }
   }
 }
 
