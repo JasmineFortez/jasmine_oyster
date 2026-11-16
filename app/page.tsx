@@ -83,10 +83,10 @@ export default function Home() {
                 The dispatch
               </h2>
               <p className="mt-4 text-[1.05rem] leading-[1.65]">
-                Before I wrote code, I wanted to be a journalist. Growing up in
-                the Philippines, I fell in love with investigating and relaying
-                information&mdash;partly out of raw curiosity, and partly because
-                I was naturally <em>chismosa</em>.
+                Before I wrote code, I wanted to be a reporter. I&apos;d come
+                home from school to find the titas outside, grilling isaw and
+                talking about life, then run inside to report it all back to my
+                nanay.
               </p>
               <Link
                 href="/about"

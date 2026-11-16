@@ -22,24 +22,59 @@ export default function About() {
             <span className="font-medium tracking-wide [font-variant-caps:small-caps]">
               San Jose, Calif.
             </span>{" "}
-            &mdash; Before I wrote code, I wanted to be a journalist. Growing up
-            in the Philippines, I fell in love with investigating and relaying
-            information&mdash;partly out of raw curiosity, and partly because I
-            was naturally <em>chismosa</em>.
+            &mdash; Before I wrote code, I wanted to be a reporter.
           </p>
           <p>
-            When my family immigrated to the U.S., that dream felt out of reach.
-            Keeping up with English was exhausting, and the fear of being
-            misunderstood pushed me toward mathematics and computer science,
-            where logic was absolute and a semicolon meant the same thing in
-            every language.
+            In elementary school in the Philippines, my friends and I were always
+            trading bugtong, quizzing each other, and eventually making up our
+            own.
+          </p>
+          <blockquote className="border-l-[3px] border-mark pl-5">
+            <p lang="tl" className="italic">
+              Bugtong, bugtong: laging naka-pink at Hello Kitty headband, pero
+              laging late.
+            </p>
+            <p className="mt-1 text-[1.05rem] text-muted">
+              Riddle me this: always in pink with a Hello Kitty headband, but
+              always late. (The answer was me.)
+            </p>
+          </blockquote>
+          <p>
+            Chismis was how everyone connected. I&apos;d come home from school to
+            find the titas outside, grilling isaw and talking about life.
+            I&apos;d stand there and listen, and I felt like I belonged, like I
+            knew everything. Then I&apos;d run inside to report it all back to my
+            nanay, who was home cooking for our whole household. She got the
+            news; I got to be the one who told it.
           </p>
           <p>
-            After graduating with a 3.79 in CS from UC Santa Cruz and working
-            across data pipelines and mobile apps, I realized technical systems
-            are meaningless if you can&apos;t tell the human story behind them.
-            This website is my newsroom: a place to bridge engineering logic with
-            documentation, data storytelling, and the voice I almost left behind.
+            Then my family moved to the U.S., and suddenly I was surrounded by
+            jokes I didn&apos;t get. Everyone talked about classics I was
+            supposed to love, like <cite>The Notebook</cite>, and movies I&apos;d
+            never seen. Every book and conversation assumed background I
+            didn&apos;t have. Eventually I quietly gave up on reading. The girl
+            who used to make up her own riddles couldn&apos;t understand the
+            punchline anymore.
+          </p>
+          <p>
+            Math was different. It was unironically comforting, because it was
+            the one thing that stayed the same no matter the country. Logic was
+            absolute, and a semicolon meant the same thing in every language. So
+            that&apos;s where I went.
+          </p>
+          <p>
+            That            So I learned to tell stories a different way. At UC Santa Cruz Iapos;s where I learned to tell stories a different way. At UC Santa Cruz I
+            earned my CS degree with a 3.79, then built a handyman app in
+            Singapore, researched AI for education, and designed a carpool app
+            from 24 student surveys. Every one of those started with the same
+            reporter&apos;s questions: who is this for, what&apos;s really going
+            on, and what&apos;s the story behind the numbers?
+          </p>
+          <p>
+            I never stopped being <em>chismosa</em>. I just changed the medium. I
+            write my READMEs in English and Tagalog. I treat documentation like
+            journalism. And I built this site like a newspaper, because that kid
+            standing by the ihaw deserved to finally get her byline.
           </p>
         </div>
         <div className="mt-14 border-t border-rule pt-8">
