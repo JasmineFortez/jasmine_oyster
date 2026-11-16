@@ -29,9 +29,9 @@ export const featured: Project[] = [
   {
     slug: "variantz",
     kicker: "Variantz, Singapore",
-    headline: "Building a handyman app in eight weeks",
-    role: "Application developer, UCEAP internship 2025",
-    body: "Taught myself React Native and built features for a cross-platform handyman app: real-time booking and tracking, offline-first cash payment confirmation, and ratings. Worked with designers and backend engineers on API integration. Earned a 2025 UCEAP Internship Award.",
+    headline: "Building an Uber for handymen in eight weeks",
+    role: "Application developer intern, Summer 2024",
+    body: "Co-developed Merchanex, an Uber-style handyman app, as two React Native apps in 8 weeks. I built the customer app's service browsing, with filters and sorting by star rating, and designed a cash payment confirmation flow. Earned a 2025 UCEAP Internship Award.",
     stack: ["React Native", "TypeScript", "APIs"],
     links: [
       {
@@ -39,25 +39,35 @@ export const featured: Project[] = [
         href: "https://uceap.universityofcalifornia.edu/awards/jasmine-fortez-internship-2025",
       },
     ],
+    context:
+      "Variantz is a startup in Singapore. I joined as an application developer intern in summer 2024 through UCEAP's Summer Global Internship program.",
     article: [
       {
         heading: "The assignment",
         paragraphs: [
-          "Variantz, an early-stage startup in Singapore, was building an on-demand handyman service. It needed two apps that worked together: one for customers booking a job, and one for the handymen taking it.",
-          "I joined as an application developer through UCEAP's Summer Global Internship. I had never written React Native before.",
+          "Variantz was building Merchanex, an app that works like Uber but for handyman services: customers find and book help, and service providers take the jobs. That meant two apps that had to work together, one for customers and one for providers, built in eight weeks.",
+          "I joined a team of UI/UX designers and backend developers. I had never written React Native before, so I taught myself on the job.",
         ],
       },
       {
-        heading: "What I built",
+        heading: "What I owned: finding the right handyman",
         paragraphs: [
-          "I taught myself React Native and built features across both apps: real-time booking and tracking, sorting handymen by star rating, ratings after a job, and a cash payment confirmation flow so a job could be marked as paid even when the customer paid in cash.",
-          "The prototype ran on a mock database, which let the team test the full booking flow before the backend was finished.",
+          "My main piece was the service browsing experience in the customer app. It's the first thing every customer touches before they book anything, so it had to make finding help feel easy.",
+          "I built filters so customers could narrow down services, and sorting by star rating so the best-reviewed providers showed up first.",
         ],
       },
       {
-        heading: "How I worked",
+        heading: "The cash problem",
         paragraphs: [
-          "Most days were coding, debugging, and API integration. I worked closely with designers and backend engineers to keep the experience smooth and stable across different devices, and I documented our processes and CI/CD practices so the next person could pick up where I left off.",
+          "A lot of handyman jobs get paid in cash, and cash never touches the app. That raised a real question: if the money changes hands in person, how do both sides know the payment actually happened?",
+          "I designed a cash payment confirmation flow between the customer and provider apps, so both sides confirm the payment before a booking is marked complete. Nobody has to take the other person's word for it.",
+        ],
+      },
+      {
+        heading: "Building as a team",
+        paragraphs: [
+          "Beyond my own features, I collaborated on map-based location tracking, provider ratings, and booking. I worked with the backend developers on API integration and with the designers to keep the apps smooth and stable across different devices.",
+          "We built the prototype on a mock database, so the apps could move forward before the real backend was ready. I also documented our processes and CI/CD practices so the next person could pick up where we left off.",
         ],
       },
       {
@@ -72,24 +82,30 @@ export const featured: Project[] = [
     slug: "tech4good-career-chatbot",
     kicker: "Tech4Good Lab, UC Santa Cruz",
     headline: "Teaching a career chatbot to give better answers",
-    role: "GenAI researcher and education lead",
-    body: "Refined prompts for a retrieval-augmented generation (RAG) career chatbot that helps UCSC students, and taught generative AI course sections under Prof. David Lee.",
-    stack: ["Python", "LLMs", "RAG"],
+    role: "GenAI researcher and education lead, 2025",
+    body: "Refined a RAG chatbot built with LangChain and OpenAI, tuning prompts and retrieval over interview transcripts, and taught lab sections on generative AI to 40+ engineering students under Prof. David Lee.",
+    stack: ["Python", "LangChain", "OpenAI API", "RAG"],
     links: [{ label: "Repo or paper", href: "" }],
-    // TODO: this story is thin. Add what the chatbot answered, what you changed in
-    // the prompts, and one result (what got better after your changes).
+    context:
+      "UC Santa Cruz's Tech4Good Lab, led by Prof. David Lee, builds technology for social good. I joined as a generative AI researcher and education lead from January to June 2025.",
+    // TODO: add one result if you have it (what got better after your changes)
     article: [
       {
         heading: "The project",
         paragraphs: [
-          "UCSC's Tech4Good Lab was building a career chatbot to help students with questions about jobs and internships. It used retrieval-augmented generation (RAG): before answering, the chatbot looks up relevant documents, so its answers are grounded in real information instead of guesses.",
+          "The lab was building a career chatbot to help students with questions about jobs and internships. It used retrieval-augmented generation (RAG): before answering, the chatbot looks up relevant material, in this case interview transcripts, so its answers are grounded in real experiences instead of guesses.",
         ],
       },
       {
         heading: "What I did",
         paragraphs: [
-          "I refined the chatbot's prompts so its answers were clearer and more useful to students.",
-          "As the lab's education lead, I also taught generative AI course sections under Prof. David Lee, helping other students understand how these tools work and where they fall short.",
+          "Working with LangChain and the OpenAI API, I tuned the chatbot's prompt templates and how well it retrieved the right transcripts for each question. Better retrieval means the chatbot pulls the most relevant stories, and better prompts mean it turns them into clear, useful answers.",
+        ],
+      },
+      {
+        heading: "Teaching it",
+        paragraphs: [
+          "As the lab's education lead, I taught lab sections for more than 40 engineering students on vector retrieval, prompt engineering, and how to evaluate what an LLM gives back. Explaining these ideas to others made me understand them a lot better myself.",
         ],
       },
     ],
