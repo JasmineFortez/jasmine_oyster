@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Ang dispatch",
+  title: "Mula sa ihawan hanggang sa terminal",
   description:
     "Paano naging software engineer ang isang batang gustong maging reporter sa Pilipinas.",
   alternates: { languages: { en: "/about" } },
@@ -14,7 +14,7 @@ export default function AboutTagalog() {
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-24" lang="tl">
       <article className="pt-20 sm:pt-28">
         <h1 className="border-b-[3px] border-mark pb-8 text-[clamp(2.5rem,7vw,4.25rem)] leading-[0.98] font-medium tracking-[-0.02em] [font-variation-settings:'opsz'_72]">
-          Ang dispatch
+          Mula sa ihawan hanggang sa terminal
         </h1>
         <div className="mt-4 flex flex-wrap items-baseline justify-between gap-3">
           <p className="text-[0.95rem] italic text-muted">Ni Jasmine Fortez</p>
