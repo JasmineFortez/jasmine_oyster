@@ -50,10 +50,11 @@ export default function Home() {
           From the editor
         </h2>
         <p className="text-[1.3rem] leading-[1.6] text-balance">
-          I&apos;m Jasmine Fortez, a software engineer building mobile apps, AI tools,
-          and data products. I grew up in the Philippines wanting to be a
-          reporter, and I never stopped being <em>chismosa</em>. This paper is
-          where I tell the story behind what I build.
+          I&apos;m a software engineer who builds practical, human-centered
+          tools. I&apos;ve shipped apps for a startup in Singapore and a youth
+          nonprofit in DC. I grew up in the Philippines wanting to be a
+          reporter, and I still build like one: I start with the people and
+          their story.
         </p>
         <Link
           href="/about"
