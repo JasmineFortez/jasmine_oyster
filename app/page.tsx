@@ -4,11 +4,17 @@ import Story from "./components/story";
 import Today from "./components/today";
 import { aiBuilds, featured } from "./data/projects";
 
-export default function Home() {
-  const [lead, ...columns] = featured;
-
+function SectionHeading({ id, children }: { id: string; children: React.ReactNode }) {
   return (
-    <main className="mx-auto w-full max-w-6xl flex-1 px-6 pb-28">
+    <h2 id={id} className="border-b border-ink pb-2 text-2xl font-semibold tracking-tight">
+      {children}
+    </h2>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="mx-auto w-full max-w-6xl flex-1 px-6 pb-24">
       {/* Masthead */}
       <header className="pt-12 sm:pt-16">
         <div className="hidden items-end justify-between text-[0.9rem] italic text-muted sm:flex">
@@ -23,81 +29,81 @@ export default function Home() {
           The Jasmine Times
         </h1>
 
-        {/* Dateline bar */}
         <div className="mt-6 border-y-[3px] border-double border-ink py-2.5">
           <div className="flex flex-col items-center gap-2 text-[0.95rem] sm:flex-row sm:justify-between">
-            <span className="text-muted">
+            <span className="text-muted sm:w-1/3">
               <Today />
             </span>
-            <span className="font-semibold">Jasmine Fortez, software engineer</span>
-            <ContactLinks />
+            <span className="italic sm:w-1/3 sm:text-center">
+              UC Santa Cruz CS, by way of the Philippines
+            </span>
+            <span className="sm:flex sm:w-1/3 sm:justify-end">
+              <ContactLinks />
+            </span>
           </div>
         </div>
-
-        <p className="mx-auto mt-6 max-w-2xl text-center text-xl leading-snug text-balance">
-          Software engineer building mobile apps, AI tools, and data products.
-          <span className="mt-1 block italic text-muted">
-            UC Santa Cruz CS, by way of the Philippines.
-          </span>
-        </p>
       </header>
 
-      {/* Front page */}
-      <div className="mt-10 border-t-[3px] border-mark pt-8">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-0">
-          {/* Lead story */}
-          <section aria-label="Lead story" className="lg:col-span-8 lg:border-r lg:border-rule lg:pr-10">
-            <Story project={lead} size="lead" />
+      {/* Editor's note */}
+      <section aria-label="Editor's note" className="mx-auto max-w-2xl py-12 text-center">
+        <p className="text-[1.3rem] leading-[1.6] text-balance">
+          <span className="font-semibold">Editor&apos;s note.</span> I&apos;m
+          Jasmine Fortez, a software engineer building mobile apps, AI tools,
+          and data products. I grew up in the Philippines wanting to be a
+          reporter, and I never stopped being <em>chismosa</em>. This paper is
+          where I tell the story behind what I build.
+        </p>
+        <Link
+          href="/about"
+          className="mt-4 inline-block text-[1rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
+        >
+          Read the full dispatch
+        </Link>
+      </section>
 
-            <div className="mt-10 grid gap-10 border-t border-rule pt-8 md:grid-cols-2 md:gap-0">
-              {columns.map((p, i) => (
-                <div
-                  key={p.headline}
-                  className={i === 0 ? "md:border-r md:border-rule md:pr-8" : "md:pl-8"}
-                >
-                  <Story project={p} />
-                </div>
-              ))}
+      <div className="border-t-[3px] border-mark" />
+
+      {/* Selected work */}
+      <section aria-labelledby="work" className="pt-10">
+        <SectionHeading id="work">Selected work</SectionHeading>
+        <div className="mt-8 grid gap-12 md:grid-cols-3 md:gap-0">
+          {featured.map((p, i) => (
+            <div
+              key={p.headline}
+              className={[
+                "md:px-7",
+                i === 0 ? "md:pl-0" : "md:border-l md:border-rule",
+                i === featured.length - 1 ? "md:pr-0" : "",
+              ].join(" ")}
+            >
+              <Story project={p} />
             </div>
-          </section>
-
-          {/* Sidebar */}
-          <aside className="space-y-10 lg:col-span-4 lg:pl-10">
-            <section aria-labelledby="briefs">
-              <h2 id="briefs" className="border-b border-ink pb-2 text-xl font-semibold tracking-tight">
-                AI-assisted builds
-              </h2>
-              <p className="mt-3 text-[0.95rem] leading-relaxed text-muted">
-                Smaller projects I shipped fast with AI. Each README covers what
-                I directed, what the AI wrote, and what I changed.
-              </p>
-              <div className="mt-5 space-y-8">
-                {aiBuilds.map((p) => (
-                  <Story key={p.headline} project={p} size="brief" />
-                ))}
-              </div>
-            </section>
-
-            <section aria-labelledby="dispatch">
-              <h2 id="dispatch" className="border-b border-ink pb-2 text-xl font-semibold tracking-tight">
-                The dispatch
-              </h2>
-              <p className="mt-4 text-[1.05rem] leading-[1.65]">
-                Before I wrote code, I wanted to be a reporter. Every day after
-                school, I&apos;d find the titas by the ihawan and ask,{" "}
-                <em lang="tl">&ldquo;Mare, anong latest?&rdquo;</em> Then I&apos;d
-                run inside to report it all back to my nanay.
-              </p>
-              <Link
-                href="/about"
-                className="mt-3 inline-block text-[0.95rem] underline decoration-mark/40 underline-offset-4 transition-colors hover:text-mark hover:decoration-mark"
-              >
-                Continue reading
-              </Link>
-            </section>
-          </aside>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* AI-assisted builds */}
+      <section aria-labelledby="ai-builds" className="pt-16">
+        <SectionHeading id="ai-builds">AI-assisted builds</SectionHeading>
+        <p className="mt-3 max-w-[38em] text-[1.02rem] leading-relaxed text-muted">
+          Smaller projects I shipped fast with AI. Each README covers what I
+          directed, what the AI wrote, and what I changed, in English and
+          Tagalog.
+        </p>
+        <div className="mt-8 grid gap-12 md:grid-cols-3 md:gap-0">
+          {aiBuilds.map((p, i) => (
+            <div
+              key={p.headline}
+              className={[
+                "md:px-7",
+                i % 3 === 0 ? "md:pl-0" : "md:border-l md:border-rule",
+              ].join(" ")}
+            >
+              <Story project={p} size="brief" />
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

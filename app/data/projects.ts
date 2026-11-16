@@ -16,13 +16,13 @@ export type Project = {
 export const featured: Project[] = [
   {
     kicker: "Variantz, Singapore",
-    headline: "Building a handyman app in eight weeks: real-time booking, tracking, and offline payments",
-    role: "Application developer, UCEAP Summer Global Internship 2025",
-    body: "Taught myself React Native and built features for a cross-platform handyman app, with separate customer and provider apps: real-time booking and tracking, an offline-first cash payment confirmation flow, and ratings. Worked with designers and backend engineers on API integration and stability across devices. Earned a 2025 UCEAP Internship Award.",
-    stack: ["React Native", "TypeScript", "APIs", "CI/CD"],
+    headline: "Building a handyman app in eight weeks",
+    role: "Application developer, UCEAP internship 2025",
+    body: "Taught myself React Native and built features for a cross-platform handyman app: real-time booking and tracking, offline-first cash payment confirmation, and ratings. Worked with designers and backend engineers on API integration. Earned a 2025 UCEAP Internship Award.",
+    stack: ["React Native", "TypeScript", "APIs"],
     links: [
       {
-        label: "Read the UCEAP award feature",
+        label: "UCEAP award feature",
         href: "https://uceap.universityofcalifornia.edu/awards/jasmine-fortez-internship-2025",
       },
     ],

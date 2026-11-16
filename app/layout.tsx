@@ -4,6 +4,7 @@ import "@fontsource-variable/newsreader/opsz-italic.css";
 import "@fontsource/ibm-plex-mono/400.css";
 import "./globals.css";
 import SiteNav from "./components/site-nav";
+import SiteFooter from "./components/site-footer";
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="flex min-h-full flex-col">
         <SiteNav />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import ContactLinks from "../components/contact-links";
 
 export const metadata: Metadata = {
   title: "About",
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-32">
+    <main className="mx-auto w-full max-w-3xl flex-1 px-6 pb-24">
       <article className="pt-20 sm:pt-28">
         <h1 className="border-b-[3px] border-mark pb-8 text-[clamp(2.5rem,7vw,4.25rem)] leading-[0.98] font-medium tracking-[-0.02em] [font-variation-settings:'opsz'_72]">
           The dispatch
@@ -87,9 +86,6 @@ export default function About() {
             journalism. And I built this site like a newspaper, because that little
             Marites by the ihawan deserved to finally get her byline.
           </p>
-        </div>
-        <div className="mt-14 border-t border-rule pt-8">
-          <ContactLinks />
         </div>
       </article>
     </main>
