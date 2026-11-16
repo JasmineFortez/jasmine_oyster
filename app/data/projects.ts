@@ -211,8 +211,8 @@ export const aiBuilds: Project[] = [
     kicker: "Beautiful As I Am, Washington, D.C.",
     headline: "I do, we do, you do: a three-week coding curriculum for young girls",
     role: "Volunteer curriculum designer and developer",
-    body: "When BAIA wanted a STEM curriculum for elementary-school girls, I volunteered to build it: three weeks of lessons that each move from \u201cI do\u201d to \u201cwe do\u201d to \u201cyou do,\u201d delivered as a React site built with an AI-assisted workflow.",
-    stack: ["React", "Vercel", "AI-assisted"],
+    body: "When BAIA wanted a STEM curriculum for elementary-school girls, I volunteered to build it: three weeks in Scratch that move from \u201cI do\u201d (learning the basics) to \u201cwe do\u201d (building a project together) to \u201cyou do\u201d (each girl's own project).",
+    stack: ["Scratch", "React", "Vercel", "AI-assisted"],
     links: [
       { label: "Visit the live site", href: "https://baia-code-confidence.vercel.app" },
     ],
@@ -229,8 +229,15 @@ export const aiBuilds: Project[] = [
       {
         heading: "I do, we do, you do",
         paragraphs: [
-          "Every lesson follows the same rhythm. First, I do: the instructor shows how something works. Then, we do: everyone tries it together, with help right there. Finally, you do: each girl tries it on her own.",
-          "For a beginner, that order matters. Nobody gets thrown into the deep end, and by the time a girl is coding on her own, she's already done it once with support. That's where the name comes from. The whole curriculum is built to grow confidence, one step at a time.",
+          "I built the three weeks around a classic teaching rhythm, one week per step. Week one is \u201cI do\u201d: the girls learn basic coding concepts. Week two is \u201cwe do\u201d: we build a project together. Week three is \u201cyou do\u201d: each girl makes her own project.",
+          "For a beginner, that order matters. Nobody gets thrown into the deep end, and by the time a girl is building on her own, she's already done it once with support. That's where the name comes from. The whole curriculum is built to grow confidence, one step at a time, and I made sure every lesson fit that structure.",
+        ],
+      },
+      {
+        heading: "Coding in Scratch",
+        paragraphs: [
+          "The lessons use Scratch, where kids snap together colorful code blocks instead of typing. It lets young kids focus on how code thinks, like loops, events, and steps in order, without getting stuck on typos.",
+          "I made the curriculum bright and colorful on purpose. For elementary-school girls, it should look like something fun to play with, not homework.",
         ],
       },
       {
