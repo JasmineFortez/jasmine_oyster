@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CashHandshakeDiagram from "../../components/cash-handshake-diagram";
+import RagDiagram from "../../components/rag-diagram";
 import { allProjects, type Figure } from "../../data/projects";
 
 // Prerender one page per story. Unknown slugs fall through to notFound() below.
@@ -93,6 +94,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
               </div>
               {section.figure && <StoryFigure figure={section.figure} />}
               {section.diagram === "cash-handshake" && <CashHandshakeDiagram />}
+              {section.diagram === "rag-pipeline" && <RagDiagram />}
             </section>
           ))}
         </div>

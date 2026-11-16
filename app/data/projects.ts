@@ -10,7 +10,7 @@ export type ArticleSection = {
   heading: string;
   paragraphs: string[];
   figure?: Figure; // optional image shown after the section's paragraphs
-  diagram?: "cash-handshake"; // optional built-in diagram shown after the paragraphs
+  diagram?: "cash-handshake" | "rag-pipeline"; // optional built-in diagram shown after the paragraphs
 };
 
 export type Project = {
@@ -85,23 +85,37 @@ export const featured: Project[] = [
     kicker: "Tech4Good Lab, UC Santa Cruz",
     headline: "Teaching a career chatbot to give better answers",
     role: "GenAI researcher and education lead, 2025",
-    body: "Refined a RAG chatbot built with LangChain and OpenAI, tuning prompts and retrieval over interview transcripts, and taught lab sections on generative AI to 40+ engineering students under Prof. David Lee.",
+    body: "Tuned a RAG career chatbot built with LangChain and OpenAI, drawing on interviews with people from every kind of career path, and measured the improvements with LLM scoring and my own review. Also taught generative AI to 40+ engineering students.",
     stack: ["Python", "LangChain", "OpenAI API", "RAG"],
     links: [{ label: "Repo or paper", href: "" }],
     context:
-      "UC Santa Cruz's Tech4Good Lab, led by Prof. David Lee, builds technology for social good. I joined as a generative AI researcher and education lead from January to June 2025.",
-    // TODO: add one result if you have it (what got better after your changes)
+      "UC Santa Cruz's Tech4Good Lab is led by Prof. David Lee. I joined as a generative AI researcher and education lead from January to June 2025.",
     article: [
       {
         heading: "The project",
         paragraphs: [
-          "The lab was building a career chatbot to help students with questions about jobs and internships. It used retrieval-augmented generation (RAG): before answering, the chatbot looks up relevant material, in this case interview transcripts, so its answers are grounded in real experiences instead of guesses.",
+          "The lab was building a career chatbot to help UCSC students figure out their next steps. It drew on real interviews with people whose careers looked very different: some followed a straight line, some changed direction partway through, and some went to trade school instead of a four-year path.",
+          "That range was the point. A student who doesn't fit the usual mold should still be able to find someone whose story looks like theirs.",
         ],
+      },
+      {
+        heading: "How it works",
+        paragraphs: [
+          "The chatbot uses retrieval-augmented generation (RAG). Before it answers, it searches the interviews for the ones that best match the student's question, then hands those to the AI along with the question. That way the answer is grounded in real people's experiences instead of generic advice.",
+        ],
+        diagram: "rag-pipeline",
       },
       {
         heading: "What I did",
         paragraphs: [
-          "Working with LangChain and the OpenAI API, I tuned the chatbot's prompt templates and how well it retrieved the right transcripts for each question. Better retrieval means the chatbot pulls the most relevant stories, and better prompts mean it turns them into clear, useful answers.",
+          "Working with LangChain and the OpenAI API, I tuned the two parts that decide how good an answer is: how well the chatbot finds the right interviews for each question, and the prompt that tells the AI how to use them.",
+        ],
+      },
+      {
+        heading: "How we knew it got better",
+        paragraphs: [
+          "Changing prompts is easy. Knowing whether an answer actually got better is the hard part. We evaluated answers two ways: LLM scoring, where another model grades each answer against set metrics, and my own review, where I read the answers myself.",
+          "Each one catches what the other misses. Automated scoring can check a lot of answers quickly, and reading them myself caught the things a score can't, like an answer that sounds confident but doesn't really help.",
         ],
       },
       {
