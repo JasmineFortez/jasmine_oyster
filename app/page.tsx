@@ -44,11 +44,13 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Editor's note */}
-      <section aria-label="Editor's note" className="mx-auto max-w-2xl py-12 text-center">
+      {/* From the editor */}
+      <section aria-labelledby="from-the-editor" className="mx-auto max-w-2xl py-12 text-center">
+        <h2 id="from-the-editor" className="mb-3 text-[1rem] italic text-mark">
+          From the editor
+        </h2>
         <p className="text-[1.3rem] leading-[1.6] text-balance">
-          <span className="font-semibold">Editor&apos;s note.</span> I&apos;m
-          Jasmine Fortez, a software engineer building mobile apps, AI tools,
+          I&apos;m Jasmine Fortez, a software engineer building mobile apps, AI tools,
           and data products. I grew up in the Philippines wanting to be a
           reporter, and I never stopped being <em>chismosa</em>. This paper is
           where I tell the story behind what I build.
