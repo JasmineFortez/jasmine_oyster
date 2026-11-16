@@ -25,8 +25,11 @@ export default function Home() {
             <span className="hidden dark:inline">Late edition</span>
           </p>
         </div>
-        <h1 className="mt-2 text-center text-[clamp(2.6rem,9.5vw,7rem)] leading-[0.95] font-semibold tracking-[-0.035em] [font-variation-settings:'opsz'_72]">
+        <p className="mt-2 text-center text-[1.15rem] font-semibold tracking-tight sm:mt-0">
           The Jasmine Times
+        </p>
+        <h1 className="mt-1 text-center text-[clamp(3rem,10.5vw,7.5rem)] leading-[0.95] font-semibold tracking-[-0.035em] [font-variation-settings:'opsz'_72]">
+          Jasmine Fortez
         </h1>
 
         <div className="mt-6 border-y-[3px] border-double border-ink py-2.5">
